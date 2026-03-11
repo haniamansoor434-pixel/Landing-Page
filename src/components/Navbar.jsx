@@ -11,7 +11,7 @@ export default function Navbar() {
   <li><a href="#security">Security</a></li>
 </ul>
 
-      <button className="login-btn">Login</button>
+      {/* <button className="login-btn">Login</button> */}
 
     </nav>
   );
