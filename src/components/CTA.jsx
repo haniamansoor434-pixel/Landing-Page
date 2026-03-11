@@ -1,37 +1,132 @@
-import "../../styles/Landing.css";
+import { motion } from "framer-motion";
+import { FaApple, FaGooglePlay } from "react-icons/fa";
+import { HiSparkles } from "react-icons/hi2";
 
 export default function CTA() {
   return (
-    <section className="cta">
+    <section className="py-20 px-6 relative">
+      <div className="max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative"
+        >
+          {/* Main CTA Card */}
+          <div className="glass-card rounded-[3rem] p-12 md:p-16 text-center relative overflow-hidden">
+            {/* Animated Background */}
+            <div className="absolute inset-0 animated-gradient opacity-10"></div>
 
-      <div className="cta-container">
+            {/* Floating Elements */}
+            <motion.div
+              animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-2xl"
+            ></motion.div>
+            <motion.div
+              animate={{ y: [0, 20, 0], rotate: [0, -10, 0] }}
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute bottom-10 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl"
+            ></motion.div>
 
-        <h1 className="cta-title">
-          Ready to Keep Your <br />
-          <span>Family Safe?</span>
-        </h1>
+            {/* Content */}
+            <div className="relative z-10">
+              {/* Badge */}
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6"
+              >
+                <HiSparkles className="text-yellow-400" />
+                <span className="text-sm font-medium">Start Protecting Your Family Today</span>
+              </motion.div>
 
-        <p className="cta-desc">
-          Join millions of families who trust Safe Track for real-time
-          location sharing and peace of mind. Start tracking your loved ones today.
-        </p>
+              {/* Headline */}
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="text-4xl md:text-6xl font-bold mb-6"
+              >
+                Ready to Keep Your
+                <br />
+                <span className="text-gradient">Family Safe?</span>
+              </motion.h2>
 
-        <div className="cta-buttons">
+              {/* Description */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+                className="text-gray-400 text-lg mb-10 max-w-2xl mx-auto"
+              >
+                Join millions of families who trust SafeTrack for real-time location sharing and peace of mind.
+                Download now and start tracking in 2 minutes.
+              </motion.p>
 
-          <button className="btn-primary">
-            
-            Get Started Free
-          </button>
+              {/* App Store Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
+              >
+                <button className="group relative inline-flex items-center gap-3 px-8 py-5 bg-white text-black rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/30">
+                  <FaApple className="text-3xl" />
+                  <div className="text-left">
+                    <div className="text-xs opacity-70">Download on the</div>
+                    <div className="text-lg font-bold">App Store</div>
+                  </div>
+                </button>
 
-          <button className="btn-secondary">
-       
-            Download App
-          </button>
+                <button className="group relative inline-flex items-center gap-3 px-8 py-5 glass rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:shadow-2xl">
+                  <FaGooglePlay className="text-3xl text-green-400" />
+                  <div className="text-left">
+                    <div className="text-xs opacity-70">Get it on</div>
+                    <div className="text-lg font-bold">Google Play</div>
+                  </div>
+                </button>
+              </motion.div>
 
-        </div>
-
+              {/* Trust Line */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.6 }}
+                className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-gray-500"
+              >
+                <span className="flex items-center gap-2">
+                  <svg className="w-5 h-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Free Forever
+                </span>
+                <span className="hidden sm:block">•</span>
+                <span className="flex items-center gap-2">
+                  <svg className="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  No Credit Card Required
+                </span>
+                <span className="hidden sm:block">•</span>
+                <span className="flex items-center gap-2">
+                  <svg className="w-5 h-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  2-Minute Setup
+                </span>
+              </motion.div>
+            </div>
+          </div>
+        </motion.div>
       </div>
-
     </section>
   );
 }
