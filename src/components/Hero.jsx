@@ -23,7 +23,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6"
           >
             <HiSparkles className="text-purple-400" />
-            <span className="text-sm font-medium">100% Free Forever • No Ads • Privacy First</span>
+            <span className="text-sm font-medium">No Ads • Privacy First</span>
           </motion.div>
 
           {/* Headline */}
