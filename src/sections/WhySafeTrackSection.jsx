@@ -1,46 +1,8 @@
 import { motion } from "framer-motion";
 import { FaCheck, FaTimes } from "react-icons/fa";
-import { HiSparkles } from "react-icons/hi2";
+import { comparisonData } from "../data/comparisonData";
 
-export default function WhySafeTrack() {
-    const comparison = [
-        {
-            feature: "Price",
-            safetrack: "100% Free Forever",
-            competitors: "Monthly Subscriptions",
-            safetrackWins: true,
-        },
-        {
-            feature: "Advertisements",
-            safetrack: "Zero Ads",
-            competitors: "Frequent Ads",
-            safetrackWins: true,
-        },
-        {
-            feature: "Data Privacy",
-            safetrack: "Never Sold",
-            competitors: "Often Monetized",
-            safetrackWins: true,
-        },
-        {
-            feature: "Real-Time Tracking",
-            safetrack: "Always Included",
-            competitors: "Premium Feature",
-            safetrackWins: true,
-        },
-        {
-            feature: "Location History",
-            safetrack: "7 Days Free",
-            competitors: "Paid Upgrade",
-            safetrackWins: true,
-        },
-        {
-            feature: "Geofence Alerts",
-            safetrack: "Unlimited",
-            competitors: "Limited in Free Tier",
-            safetrackWins: true,
-        },
-    ];
+export default function WhySafeTrackSection() {
 
     return (
         <section className="py-20 px-6 relative">
@@ -86,7 +48,7 @@ export default function WhySafeTrack() {
 
                             {/* Table Rows */}
                             <div className="divide-y divide-white/5 text-xs sm:text-sm">
-                                {comparison.map((item, index) => (
+                                {comparisonData.map((item, index) => (
                                     <motion.div
                                         key={index}
                                         initial={{ opacity: 0, x: -20 }}

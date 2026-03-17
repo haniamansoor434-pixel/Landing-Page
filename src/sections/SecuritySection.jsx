@@ -1,30 +1,17 @@
 import { motion } from "framer-motion";
 import { FiShield, FiLock, FiEyeOff, FiServer } from "react-icons/fi";
 import { HiShieldCheck } from "react-icons/hi2";
+import SectionHeader from "../components/ui/SectionHeader";
+import { securityFeatures } from "../data/securityFeatures";
 
-export default function Security() {
-  const securityFeatures = [
-    {
-      icon: <FiLock />,
-      title: "End-to-End Encryption",
-      description: "All location data is encrypted using industry-standard protocols.",
-    },
-    {
-      icon: <FiEyeOff />,
-      title: "Zero Data Selling",
-      description: "We never sell, share, or monetize your personal information.",
-    },
-    {
-      icon: <FiServer />,
-      title: "Secure Servers",
-      description: "Data stored on secure, GDPR-compliant servers with 24/7 monitoring.",
-    },
-    {
-      icon: <HiShieldCheck />,
-      title: "Privacy Controls",
-      description: "Full control over who sees your location and when they can see it.",
-    },
-  ];
+const securityIconMap = {
+  eyeOff: <FiEyeOff />,
+  lock: <FiLock />,
+  server: <FiServer />,
+  shieldCheck: <HiShieldCheck />,
+};
+
+export default function SecuritySection() {
 
   return (
     <section id="security" className="py-20 px-6 relative">
@@ -54,12 +41,11 @@ export default function Security() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                Your Privacy is <span className="text-gradient">Sacred</span>
-              </h2>
-              <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                SafeTrack is built with privacy at its core. Your location data is fully encrypted and only shared with people you explicitly trust.
-              </p>
+              <SectionHeader
+                title="Your Privacy is"
+                highlight="Sacred"
+                description="SafeTrack is built with privacy at its core. Your location data is fully encrypted and only shared with people you explicitly trust."
+              />
             </motion.div>
 
             {/* Security Features Grid */}
@@ -74,7 +60,7 @@ export default function Security() {
                   className="glass rounded-2xl p-6 text-center hover:bg-white/5 transition-colors"
                 >
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center text-green-400 text-2xl mx-auto mb-4">
-                    {feature.icon}
+                    {securityIconMap[feature.icon]}
                   </div>
                   <h3 className="text-base font-bold mb-2">{feature.title}</h3>
                   <p className="text-sm text-gray-400">{feature.description}</p>

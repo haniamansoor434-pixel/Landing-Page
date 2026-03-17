@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 import { HiSparkles } from "react-icons/hi2";
 
-export default function CTA() {
+export default function CtaSection() {
   return (
     <section className="py-20 px-6 relative">
       <div className="max-w-5xl mx-auto">

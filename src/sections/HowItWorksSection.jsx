@@ -1,33 +1,15 @@
 import { motion } from "framer-motion";
 import { FiDownload, FiUsers, FiMapPin } from "react-icons/fi";
+import SectionHeader from "../components/ui/SectionHeader";
+import { howItWorksSteps } from "../data/howItWorksSteps";
 
-export default function HowItWorks() {
-  const steps = [
-    {
-      number: "01",
-      icon: <FiDownload />,
-      title: "Download the App",
-      description:
-        "Get SafeTrack from the App Store or Google Play. Free to download and easy to set up in minutes. No credit card needed.",
-      gradient: "from-blue-500 to-cyan-500",
-    },
-    {
-      number: "02",
-      icon: <FiUsers />,
-      title: "Create Your Circle",
-      description:
-        "Create a group and share your unique tracking code with family or friends. They accept the invite and you're instantly connected.",
-      gradient: "from-purple-500 to-pink-500",
-    },
-    {
-      number: "03",
-      icon: <FiMapPin />,
-      title: "Stay Connected",
-      description:
-        "See everyone's live location on the map. Get alerts, track history, and enjoy complete peace of mind knowing your loved ones are safe.",
-      gradient: "from-green-500 to-emerald-500",
-    },
-  ];
+const stepIconMap = {
+  download: <FiDownload />,
+  mapPin: <FiMapPin />,
+  users: <FiUsers />,
+};
+
+export default function HowItWorksSection() {
 
   return (
     <section id="how" className="py-20 px-6 relative">
@@ -38,21 +20,18 @@ export default function HowItWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Get Started in
-            <br />
-            <span className="text-gradient">Three Simple Steps</span>
-          </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Setting up SafeTrack takes less than 2 minutes. Here's how it works.
-          </p>
+          <SectionHeader
+            title="Get Started in"
+            highlight="Three Simple Steps"
+            description="Setting up SafeTrack takes less than 2 minutes. Here's how it works."
+          />
         </motion.div>
 
         {/* Steps */}
         <div className="space-y-12">
-          {steps.map((step, index) => (
+          {howItWorksSteps.map((step, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 40 }}
@@ -67,7 +46,7 @@ export default function HowItWorks() {
                 {/* Step Number & Icon */}
                 <div className="flex items-center gap-6">
                   <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${step.gradient} flex items-center justify-center text-3xl group-hover:scale-110 transition-transform`}>
-                    {step.icon}
+                    {stepIconMap[step.icon]}
                   </div>
                   <div className="text-7xl font-black text-white/5">
                     {step.number}
@@ -84,45 +63,11 @@ export default function HowItWorks() {
 
                 {/* Feature Pills */}
                 <div className="flex flex-wrap gap-3">
-                  {index === 0 && (
-                    <>
-                      <span className="glass px-4 py-2 rounded-full text-sm">
-                        iOS & Android
-                      </span>
-                      <span className="glass px-4 py-2 rounded-full text-sm">
-                        2-Minute Setup
-                      </span>
-                      <span className="glass px-4 py-2 rounded-full text-sm">
-                        No Payment Info
-                      </span>
-                    </>
-                  )}
-                  {index === 1 && (
-                    <>
-                      <span className="glass px-4 py-2 rounded-full text-sm">
-                        Unlimited Members
-                      </span>
-                      <span className="glass px-4 py-2 rounded-full text-sm">
-                        Private & Secure
-                      </span>
-                      <span className="glass px-4 py-2 rounded-full text-sm">
-                        Simple Invite Code
-                      </span>
-                    </>
-                  )}
-                  {index === 2 && (
-                    <>
-                      <span className="glass px-4 py-2 rounded-full text-sm">
-                        Real-Time Updates
-                      </span>
-                      <span className="glass px-4 py-2 rounded-full text-sm">
-                        Smart Alerts
-                      </span>
-                      <span className="glass px-4 py-2 rounded-full text-sm">
-                        7-Day History
-                      </span>
-                    </>
-                  )}
+                  {step.pills.map((pill) => (
+                    <span key={pill} className="glass px-4 py-2 rounded-full text-sm">
+                      {pill}
+                    </span>
+                  ))}
                 </div>
               </div>
 
@@ -138,7 +83,7 @@ export default function HowItWorks() {
 
                   {/* Large Icon */}
                   <div className={`relative text-9xl bg-gradient-to-br ${step.gradient} bg-clip-text text-transparent`}>
-                    {step.icon}
+                    {stepIconMap[step.icon]}
                   </div>
 
                   {/* Floating Number */}

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 import { FiLock, FiDatabase, FiCheckCircle, FiMapPin, FiUsers } from "react-icons/fi";
 
-export default function Hero() {
+export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
       {/* Content Container */}
@@ -36,7 +36,7 @@ export default function Hero() {
             transition={{ delay: 0.4 }}
             className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl"
           >
-            Real-time GPS tracking that brings peace of mind. Keep your loved ones safe with location sharing that's completely free, private, and secure.
+            Real-time GPS tracking that brings peace of mind. Keep your loved ones safe with location sharing that&apos;s completely free, private, and secure.
           </motion.p>
 
           {/* App Store Buttons */}

@@ -1,34 +1,17 @@
 import { motion } from "framer-motion";
 import { HiCheckBadge } from "react-icons/hi2";
 import { FaInfinity, FaBan, FaShieldAlt, FaHeart } from "react-icons/fa";
+import SectionHeader from "../components/ui/SectionHeader";
+import { trustItems } from "../data/trustItems";
+
+const trustIconMap = {
+    ban: <FaBan />,
+    heart: <FaHeart />,
+    infinity: <FaInfinity />,
+    shield: <FaShieldAlt />,
+};
 
 export default function TrustSection() {
-    const trustItems = [
-        {
-            icon: <FaInfinity />,
-            title: "100% Free Forever",
-            description: "No hidden costs, no trials. Completely free, always.",
-            color: "from-green-400 to-emerald-600",
-        },
-        {
-            icon: <FaBan />,
-            title: "No Advertisements",
-            description: "Clean experience without annoying ads.",
-            color: "from-blue-400 to-cyan-600",
-        },
-        {
-            icon: <FaShieldAlt />,
-            title: "No Data Selling",
-            description: "Your privacy is not for sale. Ever.",
-            color: "from-purple-400 to-pink-600",
-        },
-        {
-            icon: <FaHeart />,
-            title: "Privacy First",
-            description: "Built with security and trust at the core.",
-            color: "from-red-400 to-rose-600",
-        },
-    ];
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -58,18 +41,17 @@ export default function TrustSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
+                    className="mb-16"
                 >
                     <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-4">
                         <HiCheckBadge className="text-green-400" />
                         <span className="text-sm font-medium">Why SafeTrack is Different</span>
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                        Built on <span className="text-gradient">Trust & Privacy</span>
-                    </h2>
-                    <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                        Unlike other tracking apps, SafeTrack puts your privacy first. No subscriptions, no ads, no data selling.
-                    </p>
+                    <SectionHeader
+                        title="Built on"
+                        highlight="Trust & Privacy"
+                        description="Unlike other tracking apps, SafeTrack puts your privacy first. No subscriptions, no ads, no data selling."
+                    />
                 </motion.div>
 
                 {/* Trust Grid */}
@@ -89,7 +71,7 @@ export default function TrustSection() {
                         >
                             {/* Icon */}
                             <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                                {item.icon}
+                                {trustIconMap[item.icon]}
                             </div>
 
                             {/* Content */}
