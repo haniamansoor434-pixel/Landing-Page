@@ -87,7 +87,7 @@ export default function WhySafeTrack() {
                     </div>
 
                     {/* Table Rows */}
-                    <div className="divide-y divide-white/5">
+                    <div className="divide-y divide-white/5 text-sm">
                         {comparison.map((item, index) => (
                             <motion.div
                                 key={index}
@@ -95,24 +95,25 @@ export default function WhySafeTrack() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="grid grid-cols-3 gap-4 p-6 hover:bg-white/5 transition-colors"
+                                className="grid grid-cols-3 gap-2 p-4 md:p-6 hover:bg-white/5 transition-colors items-center"
                             >
-                                <div className="font-medium">{item.feature}</div>
+                                {/* Feature Name */}
+                                <div className="font-medium text-left truncate">{item.feature}</div>
 
                                 {/* SafeTrack Column */}
-                                <div className="flex items-center justify-center gap-2">
-                                    <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center">
+                                <div className="flex items-center justify-start gap-2 truncate">
+                                    <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
                                         <FaCheck className="text-green-400 text-xs" />
                                     </div>
-                                    <span className="text-sm font-medium text-green-400">{item.safetrack}</span>
+                                    <span className="text-sm font-medium text-green-400 truncate">{item.safetrack}</span>
                                 </div>
 
                                 {/* Competitors Column */}
-                                <div className="flex items-center justify-center gap-2">
-                                    <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center">
+                                <div className="flex items-center justify-start gap-2 truncate">
+                                    <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
                                         <FaTimes className="text-red-400 text-xs" />
                                     </div>
-                                    <span className="text-sm text-gray-500">{item.competitors}</span>
+                                    <span className="text-sm text-gray-500 truncate">{item.competitors}</span>
                                 </div>
                             </motion.div>
                         ))}
