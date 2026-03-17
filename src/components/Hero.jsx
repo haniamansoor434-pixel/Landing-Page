@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
-import { HiShieldCheck, HiSparkles } from "react-icons/hi2";
+import { FiLock, FiDatabase, FiCheckCircle, FiMapPin, FiUsers } from "react-icons/fi";
 
 export default function Hero() {
   return (
@@ -15,16 +15,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-center lg:text-left"
         >
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6"
-          >
-            <HiSparkles className="text-purple-400" />
-            <span className="text-sm font-medium">No Ads • Privacy First</span>
-          </motion.div>
+
 
           {/* Headline */}
           <motion.h1
@@ -80,46 +71,58 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center gap-6 text-sm text-gray-400 justify-center lg:justify-start"
           >
             <div className="flex items-center gap-2">
-              <HiShieldCheck className="text-green-400 text-xl" />
+              <FiLock className="text-green-400 text-xl" />
               <span>End-to-End Encrypted</span>
             </div>
             <div className="hidden sm:block">•</div>
-            <div>No Data Selling</div>
+            <div className="flex items-center gap-2">
+              <FiDatabase className="text-green-400 text-xl" />
+              <span>No Data Selling</span>
+            </div>
             <div className="hidden sm:block">•</div>
-            <div>No Subscriptions</div>
+            <div className="flex items-center gap-2">
+              <FiCheckCircle className="text-green-400 text-xl" />
+              <span>No Subscriptions</span>
+            </div>
           </motion.div>
         </motion.div>
 
-        {/* RIGHT: Phone Mockup */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="relative flex justify-center lg:justify-end"
         >
-          {/* Floating Elements */}
+          {/* Floating Phone Container */}
           <motion.div
-            animate={{ y: [0, -20, 0] }}
+            animate={{ y: [0, -15, 0], rotate: [0, 1, -1, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             className="relative"
           >
-            {/* Glow Effect */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/30 to-blue-500/30 rounded-[3rem] blur-3xl"></div>
+            {/* Soft Glow Behind Phone */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-blue-500/20 rounded-[3rem] blur-3xl"></div>
 
             {/* Phone Frame */}
-            <div className="relative glass-card rounded-[3rem] p-3 w-80 h-[600px] overflow-hidden">
-              {/* Phone Notch */}
-              <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-gray-950 rounded-full z-10"></div>
+            <div className="relative glass-card rounded-[3rem] p-3 w-80 h-[600px] overflow-hidden border border-white/10 shadow-xl">
+              {/* Notch & Speaker */}
+              <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-32 h-6 flex justify-center items-center z-10">
+                <div className="w-16 h-1.5 bg-gray-700 rounded-full"></div>
+                <div className="w-2 h-2 bg-gray-700 rounded-full ml-2"></div>
+              </div>
 
-              {/* Screen Content - Placeholder */}
-              <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-[2.5rem] overflow-hidden">
+              {/* Screen Content */}
+              <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-[2.5rem] overflow-hidden relative">
                 <div className="p-6 space-y-4">
-                  <div className="h-8 bg-white/10 rounded-lg w-3/4"></div>
-                  <div className="h-64 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl"></div>
+                  <div className="h-8 bg-white/10 rounded-lg w-3/4 animate-pulse"></div>
+                  <div className="h-64 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl relative">
+                    {/* Floating icons inside screen */}
+                    <div className="absolute top-4 left-4 w-6 h-6 bg-green-400 rounded-full animate-bounce"></div>
+                    <div className="absolute bottom-4 right-6 w-6 h-6 bg-pink-400 rounded-full animate-bounce delay-200"></div>
+                  </div>
                   <div className="space-y-2">
-                    <div className="h-4 bg-white/10 rounded w-full"></div>
-                    <div className="h-4 bg-white/10 rounded w-5/6"></div>
-                    <div className="h-4 bg-white/10 rounded w-4/6"></div>
+                    <div className="h-4 bg-white/10 rounded w-full animate-pulse"></div>
+                    <div className="h-4 bg-white/10 rounded w-5/6 animate-pulse"></div>
+                    <div className="h-4 bg-white/10 rounded w-4/6 animate-pulse"></div>
                   </div>
                 </div>
               </div>
@@ -129,20 +132,24 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, -10, 0], rotate: [0, 5, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -right-4 top-20 glass-card px-4 py-3 rounded-2xl shadow-xl"
+              className="absolute -right-4 top-20 glass-card px-4 py-3 rounded-2xl shadow-lg backdrop-blur-sm"
             >
-              <div className="text-xs text-gray-400">Live Location</div>
-              <div className="font-bold text-green-400">● Active</div>
+              <div className="text-xs text-gray-400 flex items-center gap-1">
+                <FiMapPin className="text-green-400" /> Live Location
+              </div>
+              <div className="font-bold text-green-400 flex items-center gap-1">● Active</div>
             </motion.div>
 
             {/* Floating Badge 2 */}
             <motion.div
-              animate={{ y: [0, 10, 0], rotate: [0, -5, 0] }}
+              animate={{ y: [0, 12, 0], rotate: [0, -5, 0] }}
               transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="absolute -left-4 bottom-32 glass-card px-4 py-3 rounded-2xl shadow-xl"
+              className="absolute -left-4 bottom-32 glass-card px-4 py-3 rounded-2xl shadow-lg backdrop-blur-sm"
             >
-              <div className="text-xs text-gray-400">Family Circle</div>
-              <div className="font-bold">4 Members</div>
+              <div className="text-xs text-gray-400 flex items-center gap-1">
+                <FiUsers className="text-purple-400" /> Family Circle
+              </div>
+              <div className="font-bold flex items-center gap-1">4 Members</div>
             </motion.div>
           </motion.div>
         </motion.div>
