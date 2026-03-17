@@ -10,9 +10,12 @@ import {
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { IoAlertCircleOutline } from "react-icons/io5";
 import { MdLanguage } from "react-icons/md";
+import { useState } from "react";
 
 export default function Features() {
-  const features = [
+  const [showAll, setShowAll] = useState(false);
+
+  const allFeatures = [
     {
       icon: <FiMapPin />,
       title: "Real-Time Tracking",
@@ -69,23 +72,12 @@ export default function Features() {
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.08,
-      },
-    },
-  };
+  const mainFeatures = allFeatures.slice(0, 6);
+  const remainingFeatures = allFeatures.slice(6);
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
   return (
@@ -94,8 +86,7 @@ export default function Features() {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -110,55 +101,45 @@ export default function Features() {
         </motion.div>
 
         {/* Features Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {features.map((feature, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[...mainFeatures, ...(showAll ? remainingFeatures : [])].map((feature, index) => (
             <motion.div
               key={index}
+              initial="hidden"
+              animate="visible"
               variants={itemVariants}
               whileHover={{ scale: 1.03, y: -5 }}
               className="glass-card rounded-3xl p-8 hover:bg-white/5 transition-all duration-300 cursor-pointer group relative overflow-hidden"
             >
-              {/* Gradient Glow on Hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
-
-              {/* Icon */}
               <div className={`relative w-14 h-14 rounded-2xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300`}>
                 {feature.icon}
               </div>
-
-              {/* Content */}
               <h3 className="relative text-xl font-bold mb-3">{feature.title}</h3>
-              <p className="relative text-gray-400 text-sm leading-relaxed">
-                {feature.description}
-              </p>
+              <p className="relative text-gray-400 text-sm leading-relaxed">{feature.description}</p>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-center mt-16"
-        >
-          <p className="text-gray-400 mb-6">
-            And many more features to discover...
-          </p>
-          <button className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25">
-            Explore All Features
-            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </button>
-        </motion.div>
+        {!showAll && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="text-center mt-16"
+          >
+            <button
+              onClick={() => setShowAll(true)}
+              className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25"
+            >
+              Explore All Features
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </button>
+          </motion.div>
+        )}
       </div>
     </section>
   );
