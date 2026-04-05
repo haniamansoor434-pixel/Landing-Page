@@ -51,11 +51,11 @@ export default function CtaSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className="text-4xl md:text-6xl font-bold mb-6"
+                className="text-4xl md:text-6xl font-bold mb-6 text-left md:text-center"
               >
                 Ready to Keep Your
-                <br />
-                <span className="text-gradient">Family Safe?</span>
+                <br className="hidden sm:block" />
+                <span className="text-gradient sm:ml-2">Family Safe?</span>
               </motion.h2>
 
               {/* Description */}
@@ -64,7 +64,7 @@ export default function CtaSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
-                className="text-gray-400 text-lg mb-10 max-w-2xl mx-auto"
+                className="text-gray-400 text-left md:text-center text-lg mb-10 max-w-2xl mx-auto"
               >
                 Join millions of families who trust SafeTrack for real-time location sharing and peace of mind.
                 Download now and start tracking in 2 minutes.
@@ -76,21 +76,21 @@ export default function CtaSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
+                className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center w-full mb-8"
               >
-                <button className="group relative inline-flex items-center gap-3 px-8 py-5 bg-white text-black rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/30">
-                  <FaApple className="text-3xl" />
-                  <div className="text-left">
-                    <div className="text-xs opacity-70">Download on the</div>
-                    <div className="text-lg font-bold">App Store</div>
+                <button className="group w-full sm:w-auto relative inline-flex items-center justify-center gap-3 px-8 py-5 bg-white text-black rounded-2xl font-semibold transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 hover:shadow-2xl hover:shadow-white/30">
+                  <FaApple className="text-3xl shrink-0" />
+                  <div className="text-left flex-1 sm:flex-none">
+                    <div className="text-xs opacity-70 leading-tight">Download on the</div>
+                    <div className="text-lg font-bold leading-tight">App Store</div>
                   </div>
                 </button>
 
-                <button className="group relative inline-flex items-center gap-3 px-8 py-5 glass rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:shadow-2xl">
-                  <FaGooglePlay className="text-3xl text-[#56FBAC]" />
-                  <div className="text-left">
-                    <div className="text-xs opacity-70">Get it on</div>
-                    <div className="text-lg font-bold">Google Play</div>
+                <button className="group w-full sm:w-auto relative inline-flex items-center justify-center gap-3 px-8 py-5 glass rounded-2xl font-semibold transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 hover:bg-white/10 hover:shadow-2xl">
+                  <FaGooglePlay className="text-3xl text-[#56FBAC] shrink-0" />
+                  <div className="text-left flex-1 sm:flex-none">
+                    <div className="text-xs opacity-70 leading-tight">Get it on</div>
+                    <div className="text-lg font-bold leading-tight">Google Play</div>
                   </div>
                 </button>
               </motion.div>
@@ -101,24 +101,24 @@ export default function CtaSection() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.6 }}
-                className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-gray-500"
+                className="flex flex-col sm:flex-row items-start sm:items-center justify-center gap-3 sm:gap-4 text-sm text-gray-500"
               >
                 <span className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-[#56FBAC]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 text-[#56FBAC] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   Free Forever
                 </span>
-                <span className="hidden sm:block">•</span>
+                <span className="hidden sm:block text-white/20">•</span>
                 <span className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-[#616083]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 text-[#616083] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   No Credit Card Required
                 </span>
-                <span className="hidden sm:block">•</span>
+                <span className="hidden sm:block text-white/20">•</span>
                 <span className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 text-white/40 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   2-Minute Setup

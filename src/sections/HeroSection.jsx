@@ -14,7 +14,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center lg:text-left"
+          className="text-left"
         >
 
 
@@ -23,7 +23,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-5xl md:text-7xl font-bold leading-tight mb-6"
+            className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-6"
           >
             Stay Connected.
             <br />
@@ -45,21 +45,21 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4 mb-10 justify-center lg:justify-start"
+            className="flex flex-col sm:flex-row gap-4 mb-10 w-full sm:w-auto items-stretch sm:items-center justify-start"
           >
-            <button className="group relative inline-flex items-center gap-3 px-8 py-4 bg-white text-black rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-white/20">
+            <button className="group w-full sm:w-auto relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-black rounded-2xl font-semibold transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 hover:shadow-xl hover:shadow-white/20">
               <FaApple className="text-2xl" />
-              <div className="text-left">
-                <div className="text-xs opacity-70">Download on the</div>
-                <div className="text-base font-bold">App Store</div>
+              <div className="text-left flex-1 sm:flex-none">
+                <div className="text-xs opacity-70 leading-tight">Download on the</div>
+                <div className="text-base font-bold leading-tight">App Store</div>
               </div>
             </button>
 
-            <button className="group relative inline-flex items-center gap-3 px-8 py-4 glass rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:bg-white/10">
-              <FaGooglePlay className="text-2xl text-green-400" />
-              <div className="text-left">
-                <div className="text-xs opacity-70">Get it on</div>
-                <div className="text-base font-bold">Google Play</div>
+            <button className="group w-full sm:w-auto relative inline-flex items-center justify-center gap-3 px-8 py-4 glass rounded-2xl font-semibold transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 hover:bg-white/10">
+              <FaGooglePlay className="text-2xl text-[#56FBAC]" />
+              <div className="text-left flex-1 sm:flex-none">
+                <div className="text-xs opacity-70 leading-tight">Get it on</div>
+                <div className="text-base font-bold leading-tight">Google Play</div>
               </div>
             </button>
           </motion.div>
@@ -69,20 +69,20 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center gap-6 text-sm text-gray-400 justify-center lg:justify-start"
+            className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-sm text-gray-400 justify-start"
           >
-            <div className="flex items-center gap-2">
-              <FiLock className="text-green-400 text-xl" />
+            <div className="flex items-center gap-3">
+              <FiLock className="text-[#56FBAC] text-xl shrink-0" />
               <span>End-to-End Encrypted</span>
             </div>
-            <div className="hidden sm:block">•</div>
-            <div className="flex items-center gap-2">
-              <FiDatabase className="text-green-400 text-xl" />
+            <div className="hidden sm:block text-white/20">•</div>
+            <div className="flex items-center gap-3">
+              <FiDatabase className="text-[#56FBAC] text-xl shrink-0" />
               <span>No Data Selling</span>
             </div>
-            <div className="hidden sm:block">•</div>
-            <div className="flex items-center gap-2">
-              <FiCheckCircle className="text-green-400 text-xl" />
+            <div className="hidden sm:block text-white/20">•</div>
+            <div className="flex items-center gap-3">
+              <FiCheckCircle className="text-[#56FBAC] text-xl shrink-0" />
               <span>No Subscriptions</span>
             </div>
           </motion.div>

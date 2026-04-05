@@ -13,7 +13,7 @@ export default function WhySafeTrackSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
+                    className="text-left md:text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold mb-4">
                         Why Choose <span className="text-gradient">SafeTrack</span>?
@@ -95,26 +95,25 @@ export default function WhySafeTrackSection() {
                     </div>
                 </motion.div>
 
-                {/* Trust Badges */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.4 }}
-                    className="mt-12 flex flex-wrap justify-center items-center gap-8 text-sm text-gray-400"
+                    className="mt-12 flex flex-col sm:flex-row justify-center items-start sm:items-center gap-4 sm:gap-8 text-sm text-gray-400"
                 >
-                    <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-[#56FBAC] rounded-full animate-pulse shadow-[0_0_8px_rgba(86,251,172,0.6)]"></div>
+                    <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-[#56FBAC] rounded-full animate-pulse shadow-[0_0_8px_rgba(86,251,172,0.6)] shrink-0"></div>
                         <span>No Credit Card Required</span>
                     </div>
-                    <div>•</div>
-                    <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-[#616083] rounded-full animate-pulse"></div>
+                    <div className="hidden sm:block text-white/20">•</div>
+                    <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-[#616083] rounded-full animate-pulse shrink-0"></div>
                         <span>No Paywalls</span>
                     </div>
-                    <div>•</div>
-                    <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-white/40 rounded-full animate-pulse"></div>
+                    <div className="hidden sm:block text-white/20">•</div>
+                    <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-white/40 rounded-full animate-pulse shrink-0"></div>
                         <span>No Surprises</span>
                     </div>
                 </motion.div>
