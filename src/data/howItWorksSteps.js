@@ -1,29 +1,29 @@
 export const howItWorksSteps = [
     {
         number: "01",
-        title: "Download the App",
+        title: "Create an Account",
         description:
-            "Get SafeTrack from the App Store or Google Play. Free to download and easy to set up in minutes. No credit card needed.",
+            "Get started simply by creating a free account. Use your email or instantly sign in using Google to join SafeTrack.",
         gradient: "from-[#56FBAC]/20 to-[#1A1C30]",
-        icon: "download",
-        pills: ["iOS & Android", "2-Minute Setup", "No Payment Info"],
+        imageKey: "login",
+        pills: ["Easy Sign up", "Google Login", "100% Free"],
     },
     {
         number: "02",
-        title: "Create Your Circle",
+        title: "Share Your Access Code",
         description:
-            "Create a group and share your unique tracking code with family or friends. They accept the invite and you're instantly connected.",
+            "Generate your unique location access code. You are always in control and can toggle visibility or share this code with trusted people.",
         gradient: "from-[#616083]/20 to-[#1A1C30]",
-        icon: "users",
-        pills: ["Unlimited Members", "Private & Secure", "Simple Invite Code"],
+        imageKey: "share",
+        pills: ["Unique Code", "Visibility Toggle", "Privacy Control"],
     },
     {
         number: "03",
-        title: "Stay Connected",
+        title: "Add Members",
         description:
-            "See everyone's live location on the map. Get alerts, track history, and enjoy complete peace of mind knowing your loved ones are safe.",
+            "Ask friends and family for their unique code and instantly add them to your circle to see their real-time location securely.",
         gradient: "from-[#10B981]/20 to-[#1A1C30]",
-        icon: "mapPin",
-        pills: ["Real-Time Updates", "Smart Alerts", "7-Day History"],
+        imageKey: "add",
+        pills: ["Secure Connection", "Live Tracking", "Immediate Sync"],
     },
 ];

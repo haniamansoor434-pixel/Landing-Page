@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
-import { FiDownload, FiUsers, FiMapPin } from "react-icons/fi";
 import SectionHeader from "../components/ui/SectionHeader";
 import { howItWorksSteps } from "../data/howItWorksSteps";
+import loginImg from "../assets/screenshots/loginpage.png";
+import shareCodeImg from "../assets/screenshots/shareCode.png";
+import addMemberImg from "../assets/screenshots/addMember.png";
 
-const stepIconMap = {
-  download: <FiDownload />,
-  mapPin: <FiMapPin />,
-  users: <FiUsers />,
+const stepImageMap = {
+  login: loginImg,
+  share: shareCodeImg,
+  add: addMemberImg,
 };
 
 export default function HowItWorksSection() {
@@ -43,12 +45,9 @@ export default function HowItWorksSection() {
             >
               {/* Content */}
               <div className="flex-1 space-y-6">
-                {/* Step Number & Icon */}
+                {/* Step Number */}
                 <div className="flex items-center gap-6">
-                  <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${step.gradient} flex items-center justify-center text-3xl group-hover:scale-110 transition-transform`}>
-                    {stepIconMap[step.icon]}
-                  </div>
-                  <div className="text-7xl font-black text-white/5">
+                  <div className="text-7xl font-black text-[#56FBAC]/20 group-hover:text-[#56FBAC] transition-colors duration-300">
                     {step.number}
                   </div>
                 </div>
@@ -73,23 +72,21 @@ export default function HowItWorksSection() {
 
               {/* Visual */}
               <motion.div
-                whileHover={{ scale: 1.05, rotate: 2 }}
+                whileHover={{ scale: 1.05, rotate: 1 }}
                 transition={{ duration: 0.3 }}
-                className="flex-1 relative"
+                className="flex-1 relative flex justify-center lg:justify-end"
               >
-                <div className="glass-card rounded-3xl p-8 aspect-square flex items-center justify-center relative overflow-hidden group">
-                  {/* Gradient Background */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} opacity-10 group-hover:opacity-20 transition-opacity`}></div>
-
-                  {/* Large Icon */}
-                  <div className={`relative text-9xl bg-gradient-to-br ${step.gradient} bg-clip-text text-transparent`}>
-                    {stepIconMap[step.icon]}
+                <div className="relative w-full max-w-[300px] aspect-[1/2] rounded-[2.5rem] bg-black p-2 shadow-2xl border border-white/10 group overflow-hidden">
+                  {/* Decorative Glow */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} opacity-20 group-hover:opacity-40 transition-opacity blur-3xl z-0`}></div>
+                  
+                  {/* Image Screen */}
+                  <div className="relative w-full h-full rounded-[2rem] overflow-hidden bg-black z-10 border border-white/5">
+                    <img src={stepImageMap[step.imageKey]} alt={step.title} className="w-full h-full object-cover" />
                   </div>
 
-                  {/* Floating Number */}
-                  <div className="absolute top-8 right-8 text-6xl font-black text-white/5">
-                    {step.number}
-                  </div>
+                  {/* Top Notch Hint */}
+                  <div className="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-5 bg-black rounded-full z-20"></div>
                 </div>
               </motion.div>
             </motion.div>

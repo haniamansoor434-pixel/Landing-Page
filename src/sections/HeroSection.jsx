@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 import { FiLock, FiDatabase, FiCheckCircle, FiMapPin, FiUsers } from "react-icons/fi";
+import trackScreenSrc from "../assets/screenshots/trackScreen.png";
 
 export default function HeroSection() {
   return (
@@ -104,27 +105,9 @@ export default function HeroSection() {
 
             {/* Phone Frame */}
             <div className="relative glass-card rounded-[3rem] p-3 w-80 h-[600px] overflow-hidden border border-white/10 shadow-xl">
-              {/* Notch & Speaker */}
-              <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-32 h-6 flex justify-center items-center z-10">
-                <div className="w-16 h-1.5 bg-gray-700 rounded-full"></div>
-                <div className="w-2 h-2 bg-gray-700 rounded-full ml-2"></div>
-              </div>
-
               {/* Screen Content */}
-              <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-[2.5rem] overflow-hidden relative">
-                <div className="p-6 space-y-4">
-                  <div className="h-8 bg-white/10 rounded-lg w-3/4 animate-pulse"></div>
-                  <div className="h-64 bg-gradient-to-br from-[#1A1C30] to-[#0C0E1D] rounded-2xl relative border border-white/5">
-                    {/* Floating icons inside screen */}
-                    <div className="absolute top-4 left-4 w-6 h-6 bg-[#56FBAC] rounded-full animate-bounce shadow-[0_0_15px_rgba(86,251,172,0.4)]"></div>
-                    <div className="absolute bottom-4 right-6 w-6 h-6 bg-[#616083] rounded-full animate-bounce delay-200"></div>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="h-4 bg-white/10 rounded w-full animate-pulse"></div>
-                    <div className="h-4 bg-white/10 rounded w-5/6 animate-pulse"></div>
-                    <div className="h-4 bg-white/10 rounded w-4/6 animate-pulse"></div>
-                  </div>
-                </div>
+              <div className="w-full h-full bg-[#1A1C30] rounded-[2.5rem] overflow-hidden relative border border-black">
+                <img src={trackScreenSrc} alt="SafeTrack Live Location Screen" className="w-full h-full object-cover" />
               </div>
             </div>
 
