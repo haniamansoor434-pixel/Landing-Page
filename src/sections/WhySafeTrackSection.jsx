@@ -62,10 +62,10 @@ export default function WhySafeTrackSection() {
 
                                         {/* SafeTrack Column */}
                                         <div className="flex items-center justify-start gap-2 truncate">
-                                            <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
-                                                <FaCheck className="text-green-400 text-xs" />
+                                            <div className="w-6 h-6 rounded-full bg-[#56FBAC]/20 flex items-center justify-center flex-shrink-0">
+                                                <FaCheck className="text-[#56FBAC] text-xs" />
                                             </div>
-                                            <span className="text-xs sm:text-sm font-medium text-green-400 truncate">
+                                            <span className="text-xs sm:text-sm font-medium text-[#56FBAC] truncate">
                                                 {item.safetrack}
                                             </span>
                                         </div>
@@ -84,12 +84,12 @@ export default function WhySafeTrackSection() {
                     </div>
 
                     {/* Bottom Banner */}
-                    <div className="p-8 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-white/10 text-center">
+                    <div className="p-8 bg-[#1A1C30]/50 border-t border-white/10 text-center">
                         <h3 className="text-2xl font-bold mb-2">The Choice is Clear</h3>
                         <p className="text-gray-400 mb-6">
                             No hidden fees. No premium tiers. Everything included for free, forever.
                         </p>
-                        <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl font-semibold hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:shadow-purple-500/25">
+                        <button className="px-8 py-4 bg-[#56FBAC] text-[#0C0E1D] rounded-2xl font-semibold hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:shadow-[#56FBAC]/40">
                             Get SafeTrack Now
                         </button>
                     </div>
@@ -104,17 +104,17 @@ export default function WhySafeTrackSection() {
                     className="mt-12 flex flex-wrap justify-center items-center gap-8 text-sm text-gray-400"
                 >
                     <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        <div className="w-2 h-2 bg-[#56FBAC] rounded-full animate-pulse shadow-[0_0_8px_rgba(86,251,172,0.6)]"></div>
                         <span>No Credit Card Required</span>
                     </div>
                     <div>•</div>
                     <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                        <div className="w-2 h-2 bg-[#616083] rounded-full animate-pulse"></div>
                         <span>No Paywalls</span>
                     </div>
                     <div>•</div>
                     <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                        <div className="w-2 h-2 bg-white/40 rounded-full animate-pulse"></div>
                         <span>No Surprises</span>
                     </div>
                 </motion.div>

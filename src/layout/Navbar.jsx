@@ -31,7 +31,7 @@ export default function Navbar() {
           position: absolute;
           inset: -1px;
           border-radius: 100px;
-          background: conic-gradient(from 180deg at 50% 50%, #7c3aed 0deg, #db2777 120deg, #7c3aed 360deg);
+          background: conic-gradient(from 180deg at 50% 50%, #56FBAC 0deg, #10B981 120deg, #56FBAC 360deg);
           opacity: 0;
           transition: opacity 0.5s ease;
           z-index: -1;
@@ -51,7 +51,7 @@ export default function Navbar() {
           position: absolute;
           inset: 0;
           border-radius: 50%;
-          border: 1.5px solid rgba(167,139,250,0.5);
+          border: 1.5px solid rgba(86,251,172,0.5);
           animation: ping-ring 2.5s ease-out infinite;
         }
 
@@ -67,12 +67,12 @@ export default function Navbar() {
           position: absolute;
           inset: 0;
           border-radius: 100px;
-          border: 1px solid rgba(139,92,246,0);
+          border: 1px solid rgba(86,251,172,0);
           transition: border-color 0.25s ease;
         }
 
         .nav-lnk:hover::before {
-          border-color: rgba(139,92,246,0.35);
+          border-color: rgba(86,251,172,0.35);
         }
       `}</style>
 
@@ -89,8 +89,8 @@ export default function Navbar() {
 
             {/* Main Pill */}
             <div className={`pill-shell rounded-full border transition-all duration-400 ease-out backdrop-blur-[24px] backdrop-saturate-[160%] py-2 pr-2 pl-4 ${scrolled
-                ? 'bg-[rgba(8,6,18,0.82)] border-purple-600/20 shadow-[0_0_0_1px_rgba(139,92,246,0.08),0_8px_32px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.06)]'
-                : 'bg-[rgba(10,8,20,0.55)] border-white/[0.09]'
+                ? 'bg-[#0C0E1D]/80 border-[#56FBAC]/20 shadow-[0_0_0_1px_rgba(86,251,172,0.08),0_8px_32px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.06)]'
+                : 'bg-[#1A1C30]/55 border-white/[0.09]'
               }`}>
               <div className="flex items-center justify-between gap-1.5">
 
@@ -102,13 +102,13 @@ export default function Navbar() {
                 >
                   <div className="relative shrink-0">
                     <div className="logo-ping" />
-                    <div className="relative z-[1] w-[34px] h-[34px] rounded-full bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center shadow-[0_0_14px_rgba(124,58,237,0.45)]">
-                      <FiMapPin className="text-white text-[15px]" />
+                    <div className="relative z-[1] w-[34px] h-[34px] rounded-full bg-gradient-to-br from-[#56FBAC] to-[#10B981] flex items-center justify-center shadow-[0_0_14px_rgba(86,251,172,0.45)]">
+                      <FiMapPin className="text-[#0C0E1D] text-[15px]" />
                     </div>
                   </div>
                   <div className="hidden sm:block">
                     <div className="font-bold text-[0.95rem] text-white tracking-tight leading-tight">SafeTrack</div>
-                    <div className="text-[8px] font-semibold uppercase tracking-[0.18em] text-purple-400 leading-none -mt-px">Live GPS</div>
+                    <div className="text-[8px] font-semibold uppercase tracking-[0.18em] text-[#56FBAC] leading-none -mt-px">Live GPS</div>
                   </div>
                 </motion.a>
 
@@ -119,7 +119,7 @@ export default function Navbar() {
                     <a
                       key={i}
                       href={link.href}
-                      className="nav-lnk relative text-[0.82rem] font-medium tracking-wide text-white/70 hover:text-white py-[7px] px-[14px] rounded-full transition-all duration-200 whitespace-nowrap hover:bg-purple-600/12"
+                      className="nav-lnk relative text-[0.82rem] font-medium tracking-wide text-white/70 hover:text-white py-[7px] px-[14px] rounded-full transition-all duration-200 whitespace-nowrap hover:bg-[#56FBAC]/12"
                     >
                       {link.name}
                     </a>
@@ -130,11 +130,11 @@ export default function Navbar() {
                 {/* CTA Button */}
                 <div className="hidden md:block shrink-0">
                   <motion.button
-                    className="relative rounded-full p-px bg-gradient-to-br from-purple-600 to-pink-600 shadow-[0_4px_20px_rgba(124,58,237,0.3)] hover:shadow-[0_6px_28px_rgba(124,58,237,0.55)] transition-all duration-300 hover:-translate-y-px cursor-pointer"
+                    className="relative rounded-full p-px bg-gradient-to-br from-[#56FBAC] to-[#10B981] shadow-[0_4px_20px_rgba(86,251,172,0.3)] hover:shadow-[0_6px_28px_rgba(86,251,172,0.55)] transition-all duration-300 hover:-translate-y-px cursor-pointer"
                     whileTap={{ scale: 0.95 }}
                   >
-                    <div className="flex items-center gap-1.5 px-[18px] py-2 rounded-full bg-[rgba(10,8,20,0.65)] hover:bg-transparent font-semibold text-[0.82rem] tracking-wide text-white whitespace-nowrap transition-all duration-250">
-                      <HiSparkles className="text-purple-300 hover:text-white transition-colors duration-250" />
+                    <div className="flex items-center gap-1.5 px-[18px] py-2 rounded-full bg-[#1A1C30]/60 hover:bg-transparent font-semibold text-[0.82rem] tracking-wide text-white hover:text-[#0C0E1D] whitespace-nowrap transition-all duration-250">
+                      <HiSparkles className="text-[#56FBAC] hover:text-[#0C0E1D] transition-colors duration-250 group-hover:text-[#0C0E1D]" />
                       Download Free
                     </div>
                   </motion.button>
@@ -142,7 +142,7 @@ export default function Navbar() {
 
                 {/* Mobile Menu Button - Hidden on lg screens and above */}
                 <motion.button
-                  className="lg:hidden w-9 h-9 rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-white/80 hover:bg-purple-600/15 hover:border-purple-600/40 hover:text-white transition-all duration-200 shrink-0"
+                  className="lg:hidden w-9 h-9 rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-white/80 hover:bg-[#56FBAC]/15 hover:border-[#56FBAC]/40 hover:text-[#56FBAC] transition-all duration-200 shrink-0"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                   whileTap={{ scale: 0.88 }}
                 >
@@ -202,7 +202,7 @@ export default function Navbar() {
               ))}
             </nav>
             <motion.button
-              className="mt-8 flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 font-bold text-base text-white border-0 cursor-pointer shadow-[0_8px_32px_rgba(124,58,237,0.4)]"
+              className="mt-8 flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-gradient-to-br from-[#56FBAC] to-[#10B981] font-bold text-base text-[#0C0E1D] border-0 cursor-pointer shadow-[0_8px_32px_rgba(86,251,172,0.4)] hover:scale-105 transition-all"
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.38, ease: [0.22, 1, 0.36, 1] }}

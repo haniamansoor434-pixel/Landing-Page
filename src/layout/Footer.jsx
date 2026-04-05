@@ -13,8 +13,8 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
-                <FiMapPin className="text-white text-xl" />
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#56FBAC] to-[#10B981] flex items-center justify-center">
+                <FiMapPin className="text-[#0C0E1D] text-xl" />
               </div>
               <h3 className="text-2xl font-bold text-white">SafeTrack</h3>
             </div>

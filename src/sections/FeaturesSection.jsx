@@ -85,7 +85,7 @@ export default function FeaturesSection() {
           >
             <button
               onClick={() => setShowAll(true)}
-              className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25"
+              className="group relative inline-flex items-center gap-2 px-8 py-4 bg-[#56FBAC] text-[#0C0E1D] rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#56FBAC]/40"
             >
               Explore All Features
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">

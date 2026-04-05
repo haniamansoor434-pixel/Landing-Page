@@ -44,8 +44,8 @@ export default function TrustSection() {
                     className="mb-16"
                 >
                     <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-4">
-                        <HiCheckBadge className="text-green-400" />
-                        <span className="text-sm font-medium">Why SafeTrack is Different</span>
+                        <HiCheckBadge className="text-[#56FBAC]" />
+                        <span className="text-sm font-medium text-[#56FBAC]">Why SafeTrack is Different</span>
                     </div>
                     <SectionHeader
                         title="Built on"

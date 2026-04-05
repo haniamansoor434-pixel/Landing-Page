@@ -100,7 +100,7 @@ export default function HeroSection() {
             className="relative"
           >
             {/* Soft Glow Behind Phone */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-blue-500/20 rounded-[3rem] blur-3xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#56FBAC]/10 to-[#1A1C30]/40 rounded-[3rem] blur-3xl"></div>
 
             {/* Phone Frame */}
             <div className="relative glass-card rounded-[3rem] p-3 w-80 h-[600px] overflow-hidden border border-white/10 shadow-xl">
@@ -114,10 +114,10 @@ export default function HeroSection() {
               <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-[2.5rem] overflow-hidden relative">
                 <div className="p-6 space-y-4">
                   <div className="h-8 bg-white/10 rounded-lg w-3/4 animate-pulse"></div>
-                  <div className="h-64 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl relative">
+                  <div className="h-64 bg-gradient-to-br from-[#1A1C30] to-[#0C0E1D] rounded-2xl relative border border-white/5">
                     {/* Floating icons inside screen */}
-                    <div className="absolute top-4 left-4 w-6 h-6 bg-green-400 rounded-full animate-bounce"></div>
-                    <div className="absolute bottom-4 right-6 w-6 h-6 bg-pink-400 rounded-full animate-bounce delay-200"></div>
+                    <div className="absolute top-4 left-4 w-6 h-6 bg-[#56FBAC] rounded-full animate-bounce shadow-[0_0_15px_rgba(86,251,172,0.4)]"></div>
+                    <div className="absolute bottom-4 right-6 w-6 h-6 bg-[#616083] rounded-full animate-bounce delay-200"></div>
                   </div>
                   <div className="space-y-2">
                     <div className="h-4 bg-white/10 rounded w-full animate-pulse"></div>
@@ -147,7 +147,7 @@ export default function HeroSection() {
               className="absolute -left-4 bottom-32 glass-card px-4 py-3 rounded-2xl shadow-lg backdrop-blur-sm"
             >
               <div className="text-xs text-gray-400 flex items-center gap-1">
-                <FiUsers className="text-purple-400" /> Family Circle
+                <FiUsers className="text-[#616083]" /> Family Circle
               </div>
               <div className="font-bold flex items-center gap-1">4 Members</div>
             </motion.div>

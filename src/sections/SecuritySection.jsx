@@ -19,7 +19,7 @@ export default function SecuritySection() {
         {/* Main Container */}
         <div className="glass-card rounded-3xl p-12 relative overflow-hidden">
           {/* Background Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#56FBAC]/5 to-[#1A1C30]/50 border border-white/5 rounded-3xl"></div>
 
           <div className="relative z-10">
             {/* Icon & Badge */}
@@ -29,7 +29,7 @@ export default function SecuritySection() {
               viewport={{ once: true }}
               className="flex justify-center mb-8"
             >
-              <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-4xl">
+              <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-[#56FBAC] to-[#10B981] flex items-center justify-center text-4xl text-[#0C0E1D] shadow-[0_0_20px_rgba(86,251,172,0.3)]">
                 <FiShield />
               </div>
             </motion.div>
@@ -59,7 +59,7 @@ export default function SecuritySection() {
                   transition={{ delay: index * 0.1 }}
                   className="glass rounded-2xl p-6 text-center hover:bg-white/5 transition-colors"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center text-green-400 text-2xl mx-auto mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#56FBAC]/20 to-[#1A1C30] border border-white/5 flex items-center justify-center text-[#56FBAC] text-2xl mx-auto mb-4">
                     {securityIconMap[feature.icon]}
                   </div>
                   <h3 className="text-base font-bold mb-2">{feature.title}</h3>
@@ -78,17 +78,17 @@ export default function SecuritySection() {
             >
               <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-sm">
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                  <div className="w-2 h-2 bg-[#56FBAC] rounded-full shadow-[0_0_8px_rgba(86,251,172,0.6)]"></div>
                   <span className="text-gray-400">GDPR Compliant</span>
                 </div>
                 <div className="hidden md:block text-gray-600">•</div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <div className="w-2 h-2 bg-[#616083] rounded-full"></div>
                   <span className="text-gray-400">SOC 2 Certified</span>
                 </div>
                 <div className="hidden md:block text-gray-600">•</div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                  <div className="w-2 h-2 bg-white/40 rounded-full"></div>
                   <span className="text-gray-400">256-bit Encryption</span>
                 </div>
               </div>

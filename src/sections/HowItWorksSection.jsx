@@ -108,7 +108,7 @@ export default function HowItWorksSection() {
             <p className="text-gray-400 mb-4">
               Ready to get started?
             </p>
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl font-semibold hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:shadow-blue-500/25">
+            <button className="px-8 py-4 bg-[#56FBAC] text-[#0C0E1D] rounded-2xl font-semibold hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:shadow-[#56FBAC]/40">
               Download SafeTrack Now
             </button>
           </div>
