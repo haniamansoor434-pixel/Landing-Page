@@ -18,7 +18,7 @@ export default function WhySafeTrackSection() {
                     <h2 className="text-4xl md:text-5xl font-bold mb-4">
                         Why Choose <span className="text-gradient">SafeTrack</span>?
                     </h2>
-                    <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                    <p className="text-gray-400 text-lg max-w-2xl mx-0 md:mx-auto">
                         See how SafeTrack compares to other tracking apps like Life360 and Find My Friends.
                     </p>
                 </motion.div>

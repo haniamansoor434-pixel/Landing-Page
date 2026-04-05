@@ -14,7 +14,7 @@ export default function CtaSection() {
           className="relative"
         >
           {/* Main CTA Card */}
-          <div className="glass-card rounded-[3rem] p-12 md:p-16 text-center relative overflow-hidden">
+          <div className="glass-card rounded-[3rem] p-12 md:p-16 text-left md:text-center relative overflow-hidden">
             {/* Animated Background */}
             {/* Animated Background */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#56FBAC]/10 to-transparent opacity-50"></div>
@@ -64,7 +64,7 @@ export default function CtaSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
-                className="text-gray-400 text-left md:text-center text-lg mb-10 max-w-2xl mx-auto"
+                className="text-gray-400 text-left md:text-center text-lg mb-10 max-w-2xl mx-0 md:mx-auto"
               >
                 Join millions of families who trust SafeTrack for real-time location sharing and peace of mind.
                 Download now and start tracking in 2 minutes.

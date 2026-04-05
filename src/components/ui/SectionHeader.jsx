@@ -1,6 +1,6 @@
 export default function SectionHeader({ title, highlight, description, className = "", centered = true }) {
     return (
-        <div className={`${centered ? "text-center" : "text-left"} ${className}`.trim()}>
+        <div className={`${centered ? "text-left md:text-center" : "text-left"} ${className}`.trim()}>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
                 {title}
                 {highlight ? (
@@ -10,7 +10,7 @@ export default function SectionHeader({ title, highlight, description, className
                     </>
                 ) : null}
             </h2>
-            {description ? <p className="text-gray-400 text-lg max-w-3xl mx-auto">{description}</p> : null}
+            {description ? <p className="text-gray-400 text-lg max-w-3xl mx-0 md:mx-auto">{description}</p> : null}
         </div>
     );
 }

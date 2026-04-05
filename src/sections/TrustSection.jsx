@@ -41,7 +41,7 @@ export default function TrustSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="mb-16"
+                    className="text-left md:text-center mb-16"
                 >
                     <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-4">
                         <HiCheckBadge className="text-[#56FBAC]" />
@@ -91,19 +91,19 @@ export default function TrustSection() {
                     transition={{ delay: 0.4, duration: 0.6 }}
                     className="mt-16 glass-card rounded-3xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8"
                 >
-                    <div className="text-center">
+                    <div className="text-left md:text-center">
                         <div className="text-4xl font-bold text-gradient mb-2">0$</div>
                         <div className="text-sm text-gray-400">Forever Free</div>
                     </div>
-                    <div className="text-center">
+                    <div className="text-left md:text-center">
                         <div className="text-4xl font-bold text-gradient mb-2">0</div>
                         <div className="text-sm text-gray-400">Ads Shown</div>
                     </div>
-                    <div className="text-center">
+                    <div className="text-left md:text-center">
                         <div className="text-4xl font-bold text-gradient mb-2">100%</div>
                         <div className="text-sm text-gray-400">Privacy Protected</div>
                     </div>
-                    <div className="text-center">
+                    <div className="text-left md:text-center">
                         <div className="text-4xl font-bold text-gradient mb-2">24/7</div>
                         <div className="text-sm text-gray-400">Real-Time Tracking</div>
                     </div>
