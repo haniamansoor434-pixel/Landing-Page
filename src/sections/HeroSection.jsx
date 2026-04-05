@@ -104,10 +104,17 @@ export default function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-tr from-[#56FBAC]/10 to-[#1A1C30]/40 rounded-[3rem] blur-3xl"></div>
 
             {/* Phone Frame */}
-            <div className="relative glass-card rounded-[3rem] p-3 w-80 h-[600px] overflow-hidden border border-white/10 shadow-xl">
+            <div className="relative glass-card rounded-[3rem] p-3 w-80 h-[650px] overflow-hidden border border-white/10 shadow-xl">
+
               {/* Screen Content */}
-              <div className="w-full h-full bg-[#1A1C30] rounded-[2.5rem] overflow-hidden relative border border-black">
-                <img src={trackScreenSrc} alt="SafeTrack Live Location Screen" className="w-full h-full object-cover" />
+              <div className="w-full h-full bg-[#1A1C30] rounded-[2rem] overflow-hidden relative border border-black">
+
+                <img
+                  src={trackScreenSrc}
+                  alt="SafeTrack Live Location Screen"
+                  className="w-full h-full object-cover object-[center_250%] scale-100"
+                />
+
               </div>
             </div>
 
@@ -123,17 +130,7 @@ export default function HeroSection() {
               <div className="font-bold text-green-400 flex items-center gap-1">● Active</div>
             </motion.div>
 
-            {/* Floating Badge 2 */}
-            <motion.div
-              animate={{ y: [0, 12, 0], rotate: [0, -5, 0] }}
-              transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="absolute -left-4 bottom-32 glass-card px-4 py-3 rounded-2xl shadow-lg backdrop-blur-sm"
-            >
-              <div className="text-xs text-gray-400 flex items-center gap-1">
-                <FiUsers className="text-[#616083]" /> Family Circle
-              </div>
-              <div className="font-bold flex items-center gap-1">4 Members</div>
-            </motion.div>
+
           </motion.div>
         </motion.div>
       </div>

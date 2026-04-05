@@ -79,14 +79,14 @@ export default function HowItWorksSection() {
                 <div className="relative w-full max-w-[300px] aspect-[1/2] rounded-[2.5rem] bg-black p-2 shadow-2xl border border-white/10 group overflow-hidden">
                   {/* Decorative Glow */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} opacity-20 group-hover:opacity-40 transition-opacity blur-3xl z-0`}></div>
-                  
+
                   {/* Image Screen */}
                   <div className="relative w-full h-full rounded-[2rem] overflow-hidden bg-black z-10 border border-white/5">
-                    <img src={stepImageMap[step.imageKey]} alt={step.title} className="w-full h-full object-cover" />
+                    <img src={stepImageMap[step.imageKey]} alt={step.title} className="w-full h-full object-cover object-[center_90%]" />
                   </div>
 
-                  {/* Top Notch Hint */}
-                  <div className="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-5 bg-black rounded-full z-20"></div>
+
+
                 </div>
               </motion.div>
             </motion.div>
