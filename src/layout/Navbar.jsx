@@ -22,10 +22,6 @@ export default function Navbar() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
-
-        .nav-wrap * { font-family: 'Outfit', sans-serif; }
-
         /* Animated gradient border - cannot be done in Tailwind */
         .pill-glow-border {
           position: absolute;
@@ -76,21 +72,21 @@ export default function Navbar() {
         }
       `}</style>
 
-      <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center px-5 py-[18px]">
+      <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 sm:px-5 py-4 sm:py-[18px]">
         <motion.div
           initial={{ y: -72, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-          className="w-full max-w-[720px]"
+          className="w-full max-w-[760px]"
         >
           <div className="pill-outer relative">
             {/* Glow border layer */}
             <div className="pill-glow-border" />
 
             {/* Main Pill */}
-            <div className={`pill-shell rounded-full border transition-all duration-400 ease-out backdrop-blur-[24px] backdrop-saturate-[160%] py-2 pr-2 pl-4 ${scrolled
-                ? 'bg-[#0C0E1D]/80 border-[#56FBAC]/20 shadow-[0_0_0_1px_rgba(86,251,172,0.08),0_8px_32px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.06)]'
-                : 'bg-[#1A1C30]/55 border-white/[0.09]'
+            <div className={`pill-shell rounded-full border transition-all duration-400 ease-out backdrop-blur-[24px] backdrop-saturate-[160%] py-1.5 sm:py-2 pr-1.5 sm:pr-2 pl-3 sm:pl-4 ${scrolled
+              ? 'bg-[#0C0E1D]/80 border-[#56FBAC]/20 shadow-[0_0_0_1px_rgba(86,251,172,0.08),0_8px_32px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.06)]'
+              : 'bg-[#1A1C30]/55 border-white/[0.09]'
               }`}>
               <div className="flex items-center justify-between gap-1.5">
 
@@ -102,12 +98,12 @@ export default function Navbar() {
                 >
                   <div className="relative shrink-0">
                     <div className="logo-ping" />
-                    <div className="relative z-[1] w-[34px] h-[34px] rounded-full bg-gradient-to-br from-[#56FBAC] to-[#10B981] flex items-center justify-center shadow-[0_0_14px_rgba(86,251,172,0.45)]">
-                      <FiMapPin className="text-[#0C0E1D] text-[15px]" />
+                    <div className="relative z-[1] w-8 h-8 sm:w-[34px] sm:h-[34px] rounded-full bg-gradient-to-br from-[#56FBAC] to-[#10B981] flex items-center justify-center shadow-[0_0_14px_rgba(86,251,172,0.45)]">
+                      <FiMapPin className="text-[#0C0E1D] text-sm sm:text-[15px]" />
                     </div>
                   </div>
                   <div className="hidden sm:block">
-                    <div className="font-bold text-[0.95rem] text-white tracking-tight leading-tight">SafeTrack</div>
+                    <div className="font-bold text-[0.9rem] sm:text-[0.95rem] text-white tracking-tight leading-tight">SafeTrack</div>
                     <div className="text-[8px] font-semibold uppercase tracking-[0.18em] text-[#56FBAC] leading-none -mt-px">Live GPS</div>
                   </div>
                 </motion.a>
@@ -142,7 +138,7 @@ export default function Navbar() {
 
                 {/* Mobile Menu Button - Hidden on lg screens and above */}
                 <motion.button
-                  className="lg:hidden w-9 h-9 rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-white/80 hover:bg-[#56FBAC]/15 hover:border-[#56FBAC]/40 hover:text-[#56FBAC] transition-all duration-200 shrink-0"
+                  className="lg:hidden w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-white/80 hover:bg-[#56FBAC]/15 hover:border-[#56FBAC]/40 hover:text-[#56FBAC] transition-all duration-200 shrink-0"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                   whileTap={{ scale: 0.88 }}
                 >
@@ -180,7 +176,7 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            className="lg:hidden fixed inset-0 z-40 bg-[rgba(5,4,14,0.96)] backdrop-blur-[28px] flex flex-col px-7 pt-24 pb-11"
+            className="lg:hidden fixed inset-0 z-40 bg-[rgba(5,4,14,0.96)] backdrop-blur-[28px] flex flex-col px-5 sm:px-7 pt-20 sm:pt-24 pb-9 sm:pb-11"
             initial={{ opacity: 0, clipPath: "inset(0 0 100% 0 round 0px)" }}
             animate={{ opacity: 1, clipPath: "inset(0 0 0% 0 round 0px)" }}
             exit={{ opacity: 0, clipPath: "inset(0 0 100% 0 round 0px)" }}
@@ -191,7 +187,7 @@ export default function Navbar() {
                 <motion.a
                   key={i}
                   href={link.href}
-                  className="block text-[1.9rem] font-bold tracking-tight text-white/30 hover:text-white py-3.5 border-b border-white/[0.04] transition-colors duration-200 no-underline"
+                  className="block text-[1.45rem] sm:text-[1.9rem] font-bold tracking-tight text-white/30 hover:text-white py-3 sm:py-3.5 border-b border-white/[0.04] transition-colors duration-200 no-underline"
                   initial={{ x: -24, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.08 + i * 0.06, ease: [0.22, 1, 0.36, 1], duration: 0.38 }}
@@ -202,7 +198,7 @@ export default function Navbar() {
               ))}
             </nav>
             <motion.button
-              className="mt-8 flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-gradient-to-br from-[#56FBAC] to-[#10B981] font-bold text-base text-[#0C0E1D] border-0 cursor-pointer shadow-[0_8px_32px_rgba(86,251,172,0.4)] hover:scale-105 transition-all"
+              className="mt-6 sm:mt-8 flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl bg-gradient-to-br from-[#56FBAC] to-[#10B981] font-bold text-sm sm:text-base text-[#0C0E1D] border-0 cursor-pointer shadow-[0_8px_32px_rgba(86,251,172,0.4)] hover:scale-105 transition-all"
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.38, ease: [0.22, 1, 0.36, 1] }}

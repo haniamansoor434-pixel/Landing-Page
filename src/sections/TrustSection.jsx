@@ -33,7 +33,7 @@ export default function TrustSection() {
     };
 
     return (
-        <section className="py-20 px-6 relative">
+        <section className="py-16 sm:py-20 px-4 sm:px-6 relative">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <motion.div
@@ -41,11 +41,11 @@ export default function TrustSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-left md:text-center mb-16"
+                    className="text-left md:text-center mb-12 sm:mb-16"
                 >
                     <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-4">
                         <HiCheckBadge className="text-[#56FBAC]" />
-                        <span className="text-sm font-medium text-[#56FBAC]">Why SafeTrack is Different</span>
+                        <span className="text-xs sm:text-sm font-medium text-[#56FBAC]">Why SafeTrack is Different</span>
                     </div>
                     <SectionHeader
                         title="Built on"
@@ -60,23 +60,23 @@ export default function TrustSection() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+                    className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
                 >
                     {trustItems.map((item, index) => (
                         <motion.div
                             key={index}
                             variants={itemVariants}
                             whileHover={{ scale: 1.05, y: -5 }}
-                            className="glass-card rounded-3xl p-8 hover:bg-white/5 transition-all duration-300 cursor-pointer group"
+                            className="glass-card rounded-3xl p-6 sm:p-8 hover:bg-white/5 transition-all duration-300 cursor-pointer group"
                         >
                             {/* Icon */}
-                            <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                            <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center text-white text-xl sm:text-2xl mb-5 sm:mb-6 group-hover:scale-110 transition-transform duration-300`}>
                                 {trustIconMap[item.icon]}
                             </div>
 
                             {/* Content */}
-                            <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                            <p className="text-gray-400 text-sm leading-relaxed">
+                            <h3 className="text-lg sm:text-xl font-bold mb-3">{item.title}</h3>
+                            <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
                                 {item.description}
                             </p>
                         </motion.div>
@@ -89,23 +89,23 @@ export default function TrustSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.6 }}
-                    className="mt-16 glass-card rounded-3xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8"
+                    className="mt-12 sm:mt-16 glass-card rounded-3xl p-6 sm:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8"
                 >
                     <div className="text-left md:text-center">
-                        <div className="text-4xl font-bold text-gradient mb-2">0$</div>
-                        <div className="text-sm text-gray-400">Forever Free</div>
+                        <div className="text-3xl sm:text-4xl font-bold text-gradient mb-2">0$</div>
+                        <div className="text-xs sm:text-sm text-gray-400">Forever Free</div>
                     </div>
                     <div className="text-left md:text-center">
-                        <div className="text-4xl font-bold text-gradient mb-2">0</div>
-                        <div className="text-sm text-gray-400">Ads Shown</div>
+                        <div className="text-3xl sm:text-4xl font-bold text-gradient mb-2">0</div>
+                        <div className="text-xs sm:text-sm text-gray-400">Ads Shown</div>
                     </div>
                     <div className="text-left md:text-center">
-                        <div className="text-4xl font-bold text-gradient mb-2">100%</div>
-                        <div className="text-sm text-gray-400">Privacy Protected</div>
+                        <div className="text-3xl sm:text-4xl font-bold text-gradient mb-2">100%</div>
+                        <div className="text-xs sm:text-sm text-gray-400">Privacy Protected</div>
                     </div>
                     <div className="text-left md:text-center">
-                        <div className="text-4xl font-bold text-gradient mb-2">24/7</div>
-                        <div className="text-sm text-gray-400">Real-Time Tracking</div>
+                        <div className="text-3xl sm:text-4xl font-bold text-gradient mb-2">24/7</div>
+                        <div className="text-xs sm:text-sm text-gray-400">Real-Time Tracking</div>
                     </div>
                 </motion.div>
             </div>

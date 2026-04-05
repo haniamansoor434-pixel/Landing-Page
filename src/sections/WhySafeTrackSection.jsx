@@ -5,7 +5,7 @@ import { comparisonData } from "../data/comparisonData";
 export default function WhySafeTrackSection() {
 
     return (
-        <section className="py-20 px-6 relative">
+        <section className="py-16 sm:py-20 px-4 sm:px-6 relative">
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <motion.div
@@ -13,12 +13,12 @@ export default function WhySafeTrackSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-left md:text-center mb-16"
+                    className="text-left md:text-center mb-12 sm:mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
                         Why Choose <span className="text-gradient">SafeTrack</span>?
                     </h2>
-                    <p className="text-gray-400 text-lg max-w-2xl mx-0 md:mx-auto">
+                    <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-0 md:mx-auto">
                         See how SafeTrack compares to other tracking apps like Life360 and Find My Friends.
                     </p>
                 </motion.div>
@@ -34,7 +34,7 @@ export default function WhySafeTrackSection() {
                     <div className="overflow-x-auto">
                         <div className="min-w-[640px]">
                             {/* Table Header */}
-                            <div className="grid grid-cols-3 gap-4 p-6 bg-white/5 border-b border-white/10">
+                            <div className="grid grid-cols-3 gap-4 p-4 sm:p-6 bg-white/5 border-b border-white/10">
                                 <div className="text-xs sm:text-sm text-gray-400 font-medium">Feature</div>
                                 <div className="text-left">
                                     <div className="text-base sm:text-lg font-bold text-gradient mb-1">SafeTrack</div>
@@ -55,7 +55,7 @@ export default function WhySafeTrackSection() {
                                         whileInView={{ opacity: 1, x: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ delay: index * 0.1 }}
-                                        className="grid grid-cols-3 gap-2 p-4 md:p-6 hover:bg-white/5 transition-colors items-center"
+                                        className="grid grid-cols-3 gap-2 p-3 sm:p-4 md:p-6 hover:bg-white/5 transition-colors items-center"
                                     >
                                         {/* Feature Name */}
                                         <div className="font-medium text-left truncate">{item.feature}</div>
@@ -84,12 +84,12 @@ export default function WhySafeTrackSection() {
                     </div>
 
                     {/* Bottom Banner */}
-                    <div className="p-8 bg-[#1A1C30]/50 border-t border-white/10 text-center">
-                        <h3 className="text-2xl font-bold mb-2">The Choice is Clear</h3>
+                    <div className="p-6 sm:p-8 bg-[#1A1C30]/50 border-t border-white/10 text-left sm:text-center">
+                        <h3 className="text-xl sm:text-2xl font-bold mb-2">The Choice is Clear</h3>
                         <p className="text-gray-400 mb-6">
                             No hidden fees. No premium tiers. Everything included for free, forever.
                         </p>
-                        <button className="px-8 py-4 bg-[#56FBAC] text-[#0C0E1D] rounded-2xl font-semibold hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:shadow-[#56FBAC]/40">
+                        <button className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base bg-[#56FBAC] text-[#0C0E1D] rounded-2xl font-semibold hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:shadow-[#56FBAC]/40">
                             Get SafeTrack Now
                         </button>
                     </div>
@@ -100,7 +100,7 @@ export default function WhySafeTrackSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.4 }}
-                    className="mt-12 flex flex-col sm:flex-row justify-center items-start sm:items-center gap-4 sm:gap-8 text-sm text-gray-400"
+                    className="mt-10 sm:mt-12 flex flex-col sm:flex-row justify-center items-start sm:items-center gap-3 sm:gap-8 text-xs sm:text-sm text-gray-400"
                 >
                     <div className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-[#56FBAC] rounded-full animate-pulse shadow-[0_0_8px_rgba(86,251,172,0.6)] shrink-0"></div>

@@ -14,7 +14,7 @@ const stepImageMap = {
 export default function HowItWorksSection() {
 
   return (
-    <section id="how" className="py-20 px-6 relative">
+    <section id="how" className="py-16 sm:py-20 px-4 sm:px-6 relative">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
@@ -22,7 +22,7 @@ export default function HowItWorksSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-12 sm:mb-16"
         >
           <SectionHeader
             title="Get Started in"
@@ -34,7 +34,7 @@ export default function HowItWorksSection() {
         </motion.div>
 
         {/* Steps */}
-        <div className="space-y-12">
+        <div className="space-y-10 sm:space-y-12">
           {howItWorksSteps.map((step, index) => (
             <motion.div
               key={index}
@@ -43,21 +43,21 @@ export default function HowItWorksSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                } items-center gap-12`}
+                } items-center gap-8 sm:gap-12`}
             >
               {/* Content */}
-              <div className="flex-1 space-y-6">
+              <div className="flex-1 space-y-4 sm:space-y-6">
                 {/* Step Number */}
                 <div className="flex items-center gap-6">
-                  <div className="text-7xl font-black text-[#56FBAC]/20 group-hover:text-[#56FBAC] transition-colors duration-300">
+                  <div className="text-5xl sm:text-6xl md:text-7xl font-black text-[#56FBAC]/20 group-hover:text-[#56FBAC] transition-colors duration-300">
                     {step.number}
                   </div>
                 </div>
 
                 {/* Title & Description */}
                 <div className="text-left">
-                  <h3 className="text-3xl font-bold mb-4">{step.title}</h3>
-                  <p className="text-gray-400 text-lg leading-relaxed">
+                  <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">{step.title}</h3>
+                  <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -78,7 +78,7 @@ export default function HowItWorksSection() {
                 transition={{ duration: 0.3 }}
                 className="flex-1 relative flex justify-center w-full mt-4 lg:mt-0"
               >
-                <div className="relative w-full max-w-[260px] sm:max-w-[300px] aspect-[1/2] rounded-[2.5rem] bg-black p-2 shadow-2xl border border-white/10 group overflow-hidden">
+                <div className="relative w-full max-w-[240px] sm:max-w-[300px] aspect-[1/2] rounded-[2.5rem] bg-black p-2 shadow-2xl border border-white/10 group overflow-hidden">
                   {/* Decorative Glow */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} opacity-20 group-hover:opacity-40 transition-opacity blur-3xl z-0`}></div>
 
@@ -101,13 +101,13 @@ export default function HowItWorksSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.6 }}
-          className="text-center mt-16 w-full"
+          className="text-center mt-12 sm:mt-16 w-full"
         >
-          <div className="glass-card rounded-3xl p-8 inline-block w-full sm:w-auto">
-            <p className="text-gray-400 mb-4 text-left sm:text-center">
+          <div className="glass-card rounded-3xl p-6 sm:p-8 inline-block w-full sm:w-auto">
+            <p className="text-gray-400 text-sm sm:text-base mb-4 text-left sm:text-center">
               Ready to get started?
             </p>
-            <button className="w-full sm:w-auto px-8 py-4 bg-[#56FBAC] text-[#0C0E1D] rounded-2xl font-semibold hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:shadow-[#56FBAC]/40">
+            <button className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base bg-[#56FBAC] text-[#0C0E1D] rounded-2xl font-semibold hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:shadow-[#56FBAC]/40">
               Download SafeTrack Now
             </button>
           </div>

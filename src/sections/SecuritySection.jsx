@@ -14,10 +14,10 @@ const securityIconMap = {
 export default function SecuritySection() {
 
   return (
-    <section id="security" className="py-20 px-6 relative">
+    <section id="security" className="py-16 sm:py-20 px-4 sm:px-6 relative">
       <div className="max-w-6xl mx-auto">
         {/* Main Container */}
-        <div className="glass-card rounded-3xl p-12 relative overflow-hidden">
+        <div className="glass-card rounded-3xl p-6 sm:p-8 md:p-12 relative overflow-hidden">
           {/* Background Gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-[#56FBAC]/5 to-[#1A1C30]/50 border border-white/5 rounded-3xl"></div>
 
@@ -27,9 +27,9 @@ export default function SecuritySection() {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="flex justify-start md:justify-center mb-8"
+              className="flex justify-start md:justify-center mb-6 sm:mb-8"
             >
-              <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-[#56FBAC] to-[#10B981] flex items-center justify-center text-4xl text-[#0C0E1D] shadow-[0_0_20px_rgba(86,251,172,0.3)]">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-3xl bg-gradient-to-br from-[#56FBAC] to-[#10B981] flex items-center justify-center text-3xl sm:text-4xl text-[#0C0E1D] shadow-[0_0_20px_rgba(86,251,172,0.3)]">
                 <FiShield />
               </div>
             </motion.div>
@@ -39,7 +39,7 @@ export default function SecuritySection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-left md:text-center mb-12"
+              className="text-left md:text-center mb-10 sm:mb-12"
             >
               <SectionHeader
                 title="Your Privacy is"
@@ -49,7 +49,7 @@ export default function SecuritySection() {
             </motion.div>
 
             {/* Security Features Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-12">
               {securityFeatures.map((feature, index) => (
                 <motion.div
                   key={index}
@@ -57,13 +57,13 @@ export default function SecuritySection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="glass rounded-2xl p-6 text-left md:text-center hover:bg-white/5 transition-colors"
+                  className="glass rounded-2xl p-5 sm:p-6 text-left md:text-center hover:bg-white/5 transition-colors"
                 >
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#56FBAC]/20 to-[#1A1C30] border border-white/5 flex items-center justify-center text-[#56FBAC] text-2xl mx-0 md:mx-auto mb-4">
                     {securityIconMap[feature.icon]}
                   </div>
                   <h3 className="text-base font-bold mb-2">{feature.title}</h3>
-                  <p className="text-sm text-gray-400">{feature.description}</p>
+                  <p className="text-sm sm:text-base text-gray-400">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -74,9 +74,9 @@ export default function SecuritySection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="glass rounded-2xl p-8 text-left md:text-center"
+              className="glass rounded-2xl p-6 sm:p-8 text-left md:text-center"
             >
-              <div className="flex flex-col md:flex-row items-start md:items-center justify-center gap-8 text-sm">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-[#56FBAC] rounded-full shadow-[0_0_8px_rgba(86,251,172,0.6)]"></div>
                   <span className="text-gray-400">GDPR Compliant</span>
@@ -102,7 +102,7 @@ export default function SecuritySection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.6 }}
-          className="mt-8 text-left md:text-center text-sm text-gray-500"
+          className="mt-6 sm:mt-8 text-left md:text-center text-xs sm:text-sm text-gray-500"
         >
           <p>
             Your location stays between you and your trusted circle. No third parties. No exceptions.
