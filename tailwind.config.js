@@ -25,23 +25,20 @@ export default {
                 display: ['Orbitron', 'Sora', 'system-ui', 'sans-serif'],
             },
             animation: {
-                'float': 'float 6s ease-in-out infinite',
-                'glow': 'glow 2s ease-in-out infinite',
-                'gradient': 'gradient 8s linear infinite',
+                'mesh-one': 'mesh-movement-one 25s infinite alternate linear',
+                'mesh-two': 'mesh-movement-two 20s infinite alternate linear',
             },
             keyframes: {
-                float: {
-                    '0%, 100%': { transform: 'translateY(0px)' },
-                    '50%': { transform: 'translateY(-20px)' },
+                'mesh-movement-one': {
+                    '0%': { transform: 'translate(0, 0) scale(1) rotate(0deg)' },
+                    '50%': { transform: 'translate(15%, 10%) scale(1.2) rotate(15deg)' },
+                    '100%': { transform: 'translate(-5%, 20%) scale(1) rotate(-10deg)' },
                 },
-                glow: {
-                    '0%, 100%': { opacity: '1' },
-                    '50%': { opacity: '0.5' },
-                },
-                gradient: {
-                    '0%, 100%': { backgroundPosition: '0% 50%' },
-                    '50%': { backgroundPosition: '100% 50%' },
-                },
+                'mesh-movement-two': {
+                    '0%': { transform: 'translate(0, 0) scale(1.1) rotate(0deg)' },
+                    '50%': { transform: 'translate(-10%, -15%) scale(0.9) rotate(-20deg)' },
+                    '100%': { transform: 'translate(5%, -5%) scale(1.1) rotate(10deg)' },
+                }
             },
             backgroundSize: {
                 '300%': '300%',

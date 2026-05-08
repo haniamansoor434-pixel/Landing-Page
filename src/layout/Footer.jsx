@@ -16,7 +16,7 @@ export default function Footer() {
               <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#56FBAC] to-[#10B981] flex items-center justify-center">
                 <FiMapPin className="text-[#0C0E1D] text-lg sm:text-xl" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white">SafeTrack</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">Locafii</h3>
             </div>
             <p className="text-gray-400 text-sm sm:text-base mb-6 max-w-md">
               Stay connected with your loved ones through real-time GPS tracking.
@@ -52,8 +52,8 @@ export default function Footer() {
             <ul className="space-y-3 text-sm sm:text-base">
               <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
               <li>
-                <a href="mailto:support@safetrack.com" className="flex items-center gap-1 hover:text-white transition-colors">
-                  <FiMail /> support@safetrack.com
+                <a href="mailto:support@Locafii.com" className="flex items-center gap-1 hover:text-white transition-colors">
+                  <FiMail /> support@Locafii.com
                 </a>
               </li>
               <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
@@ -66,7 +66,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4 text-xs sm:text-sm">
             {/* Copyright */}
             <p className="flex flex-wrap justify-center md:justify-start items-center gap-1 text-gray-500">
-              © {currentYear} SafeTrack. Built with
+              © {currentYear} Locafii. Built with
               <FiHeart className="text-red-500 inline mx-1" size={14} />
               to keep families connected.
             </p>

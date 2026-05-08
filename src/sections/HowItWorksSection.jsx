@@ -27,7 +27,7 @@ export default function HowItWorksSection() {
           <SectionHeader
             title="Get Started in"
             highlight="Three Simple Steps"
-            description="Setting up SafeTrack takes less than 2 minutes. Here's how it works."
+            description="Setting up Locafii takes less than 2 minutes. Here's how it works."
             centered={false}
             className="md:text-center"
           />
@@ -108,7 +108,7 @@ export default function HowItWorksSection() {
               Ready to get started?
             </p>
             <button className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base bg-[#56FBAC] text-[#0C0E1D] rounded-2xl font-semibold hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:shadow-[#56FBAC]/40">
-              Download SafeTrack Now
+              Download Locafii Now
             </button>
           </div>
         </motion.div>

@@ -1,32 +1,32 @@
 export const comparisonData = [
     {
         feature: "Price",
-        safetrack: "100% Free Forever",
+        Locafii: "100% Free Forever",
         competitors: "Monthly Subscriptions",
     },
     {
         feature: "Advertisements",
-        safetrack: "Zero Ads",
+        Locafii: "Zero Ads",
         competitors: "Frequent Ads",
     },
     {
         feature: "Data Privacy",
-        safetrack: "Never Sold",
+        Locafii: "Never Sold",
         competitors: "Often Monetized",
     },
     {
         feature: "Real-Time Tracking",
-        safetrack: "Always Included",
+        Locafii: "Always Included",
         competitors: "Premium Feature",
     },
     {
         feature: "Location History",
-        safetrack: "7 Days Free",
+        Locafii: "7 Days Free",
         competitors: "Paid Upgrade",
     },
     {
         feature: "Geofence Alerts",
-        safetrack: "Unlimited",
+        Locafii: "Unlimited",
         competitors: "Limited in Free Tier",
     },
 ];

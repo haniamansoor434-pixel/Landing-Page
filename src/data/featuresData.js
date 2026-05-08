@@ -37,7 +37,7 @@ export const featuresData = [
     },
     {
         title: "Multi-Language",
-        description: "Use SafeTrack in your preferred language with full multi-language support.",
+        description: "Use Locafii in your preferred language with full multi-language support.",
         gradient: "from-[#616083]/20 to-[#1A1C30]",
         icon: "language",
     },

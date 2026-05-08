@@ -7,7 +7,7 @@ import HeroSection from "../sections/HeroSection";
 import HowItWorksSection from "../sections/HowItWorksSection";
 import SecuritySection from "../sections/SecuritySection";
 import TrustSection from "../sections/TrustSection";
-import WhySafeTrackSection from "../sections/WhySafeTrackSection";
+import WhyLocafiiSection from "../sections/WhyLocafiiSection";
 
 export default function LandingPage() {
     return (
@@ -17,7 +17,7 @@ export default function LandingPage() {
             <HeroSection />
             <TrustSection />
             <FeaturesSection />
-            <WhySafeTrackSection />
+            <WhyLocafiiSection />
             <HowItWorksSection />
             <SecuritySection />
             <CtaSection />

@@ -23,12 +23,13 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-5 sm:mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-5 sm:mb-6"
           >
             Stay Connected.
             <br />
             <span className="text-gradient">Stay Safe.</span>
           </motion.h1>
+
 
           {/* Description */}
           <motion.p
@@ -111,7 +112,7 @@ export default function HeroSection() {
 
                 <img
                   src={trackScreenSrc}
-                  alt="SafeTrack Live Location Screen"
+                  alt="Locafii Live Location Screen"
                   className="w-full h-full object-cover object-[center_250%] scale-100"
                 />
 

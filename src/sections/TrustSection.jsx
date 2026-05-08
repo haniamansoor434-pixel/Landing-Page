@@ -45,12 +45,12 @@ export default function TrustSection() {
                 >
                     <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-4">
                         <HiCheckBadge className="text-[#56FBAC]" />
-                        <span className="text-xs sm:text-sm font-medium text-[#56FBAC]">Why SafeTrack is Different</span>
+                        <span className="text-xs sm:text-sm font-medium text-[#56FBAC]">Why Locafii is Different</span>
                     </div>
                     <SectionHeader
                         title="Built on"
                         highlight="Trust & Privacy"
-                        description="Unlike other tracking apps, SafeTrack puts your privacy first. No subscriptions, no ads, no data selling."
+                        description="Unlike other tracking apps, Locafii puts your privacy first. No subscriptions, no ads, no data selling."
                     />
                 </motion.div>
 

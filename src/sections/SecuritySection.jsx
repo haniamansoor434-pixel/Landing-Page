@@ -44,7 +44,7 @@ export default function SecuritySection() {
               <SectionHeader
                 title="Your Privacy is"
                 highlight="Sacred"
-                description="SafeTrack is built with privacy at its core. Your location data is fully encrypted and only shared with people you explicitly trust."
+                description="Locafii is built with privacy at its core. Your location data is fully encrypted and only shared with people you explicitly trust."
               />
             </motion.div>
 

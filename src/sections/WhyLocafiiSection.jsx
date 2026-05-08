@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import { comparisonData } from "../data/comparisonData";
 
-export default function WhySafeTrackSection() {
+export default function WhyLocafiiSection() {
 
     return (
         <section className="py-16 sm:py-20 px-4 sm:px-6 relative">
@@ -16,10 +16,10 @@ export default function WhySafeTrackSection() {
                     className="text-left md:text-center mb-12 sm:mb-16"
                 >
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
-                        Why Choose <span className="text-gradient">SafeTrack</span>?
+                        Why Choose <span className="text-gradient">Locafii</span>?
                     </h2>
                     <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-0 md:mx-auto">
-                        See how SafeTrack compares to other tracking apps like Life360 and Find My Friends.
+                        See how Locafii compares to other tracking apps like Life360 and Find My Friends.
                     </p>
                 </motion.div>
 
@@ -37,7 +37,7 @@ export default function WhySafeTrackSection() {
                             <div className="grid grid-cols-3 gap-4 p-4 sm:p-6 bg-white/5 border-b border-white/10">
                                 <div className="text-xs sm:text-sm text-gray-400 font-medium">Feature</div>
                                 <div className="text-left">
-                                    <div className="text-base sm:text-lg font-bold text-gradient mb-1">SafeTrack</div>
+                                    <div className="text-base sm:text-lg font-bold text-gradient mb-1">Locafii</div>
                                     <div className="text-xs text-gray-400">This App</div>
                                 </div>
                                 <div className="text-left">
@@ -60,13 +60,13 @@ export default function WhySafeTrackSection() {
                                         {/* Feature Name */}
                                         <div className="font-medium text-left truncate">{item.feature}</div>
 
-                                        {/* SafeTrack Column */}
+                                        {/* Locafii Column */}
                                         <div className="flex items-center justify-start gap-2 truncate">
                                             <div className="w-6 h-6 rounded-full bg-[#56FBAC]/20 flex items-center justify-center flex-shrink-0">
                                                 <FaCheck className="text-[#56FBAC] text-xs" />
                                             </div>
                                             <span className="text-xs sm:text-sm font-medium text-[#56FBAC] truncate">
-                                                {item.safetrack}
+                                                {item.Locafii}
                                             </span>
                                         </div>
 
@@ -90,7 +90,7 @@ export default function WhySafeTrackSection() {
                             No hidden fees. No premium tiers. Everything included for free, forever.
                         </p>
                         <button className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base bg-[#56FBAC] text-[#0C0E1D] rounded-2xl font-semibold hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:shadow-[#56FBAC]/40">
-                            Get SafeTrack Now
+                            Get Locafii Now
                         </button>
                     </div>
                 </motion.div>

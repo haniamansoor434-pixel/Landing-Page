@@ -66,7 +66,7 @@ export default function CtaSection() {
                 transition={{ delay: 0.4 }}
                 className="text-gray-400 text-left md:text-center text-base sm:text-lg mb-8 sm:mb-10 max-w-2xl mx-0 md:mx-auto"
               >
-                Join millions of families who trust SafeTrack for real-time location sharing and peace of mind.
+                Join millions of families who trust Locafii for real-time location sharing and peace of mind.
                 Download now and start tracking in 2 minutes.
               </motion.p>
 

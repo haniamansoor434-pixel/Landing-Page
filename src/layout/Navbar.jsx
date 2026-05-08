@@ -103,7 +103,7 @@ export default function Navbar() {
                     </div>
                   </div>
                   <div className="hidden sm:block">
-                    <div className="font-bold text-[0.9rem] sm:text-[0.95rem] text-white tracking-tight leading-tight">SafeTrack</div>
+                    <div className="font-bold text-[0.9rem] sm:text-[0.95rem] text-white tracking-tight leading-tight">Locafii</div>
                     <div className="text-[8px] font-semibold uppercase tracking-[0.18em] text-[#56FBAC] leading-none -mt-px">Live GPS</div>
                   </div>
                 </motion.a>
