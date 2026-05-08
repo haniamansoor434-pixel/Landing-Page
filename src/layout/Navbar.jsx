@@ -130,7 +130,6 @@ export default function Navbar() {
                     whileTap={{ scale: 0.95 }}
                   >
                     <div className="flex items-center gap-1.5 px-[18px] py-2 rounded-full bg-[#1A1C30]/60 hover:bg-transparent font-semibold text-[0.82rem] tracking-wide text-white hover:text-[#0C0E1D] whitespace-nowrap transition-all duration-250">
-                      <HiSparkles className="text-[#56FBAC] hover:text-[#0C0E1D] transition-colors duration-250 group-hover:text-[#0C0E1D]" />
                       Download Free
                     </div>
                   </motion.button>
