@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 import { FiLock, FiDatabase, FiCheckCircle, FiMapPin } from "react-icons/fi";
-import trackScreenSrc from "../assets/screenshots/trackScreen.png";
+// import trackScreenSrc from "../assets/screenshots/trackScreen.png";
+import trackScreenSrc from "../assets/screenshots/track_screen.png";
 
 export default function HeroSection() {
   return (
@@ -105,19 +106,26 @@ export default function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-tr from-[#56FBAC]/10 to-[#1A1C30]/40 rounded-[3rem] blur-3xl"></div>
 
             {/* Phone Frame */}
-            <div className="relative glass-card rounded-[3rem] p-3 w-64 h-[520px] sm:w-72 sm:h-[600px] md:w-80 md:h-[650px] overflow-hidden border border-white/10 shadow-xl">
+            <div className="relative glass-card rounded-[2.5rem] sm:rounded-[3rem] p-2 sm:p-3 
+                w-full max-w-[260px] sm:max-w-[280px] md:max-w-[320px] 
+                aspect-[9/19] mx-auto
+                overflow-hidden border border-white/10 shadow-xl">
 
-              {/* Screen Content */}
-              <div className="w-full h-full bg-[#1A1C30] rounded-[2rem] overflow-hidden relative border border-black">
+              {/* Screen Content Container */}
+              <div className="w-full h-full bg-[#1A1C30] rounded-[2rem] overflow-hidden relative border border-black/50">
 
                 <img
                   src={trackScreenSrc}
                   alt="Locafii Live Location Screen"
-                  className="w-full h-full object-cover object-[center_250%] scale-100"
+                  /* Removed scale-100 to use object-cover effectively */
+                  className="w-full h-full object-cover object-top"
                 />
+
+
 
               </div>
             </div>
+
 
             {/* Floating Badge 1 */}
             <motion.div
