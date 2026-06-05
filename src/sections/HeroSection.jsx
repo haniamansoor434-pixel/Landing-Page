@@ -79,12 +79,18 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-10 w-full sm:w-auto items-stretch sm:items-center justify-start"
+            className="flex flex-col xs:flex-row sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-10 items-start"
           >
             {/* App Store Button (Triggers Snackbar) */}
             <button
               onClick={triggerToast}
-              className="group w-full sm:w-auto relative inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-8 py-3 bg-white text-black rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 hover:shadow-xl hover:shadow-white/20"
+              className="group relative inline-flex items-center justify-center gap-2.5 sm:gap-3 
+px-5 sm:px-8 py-3 
+w-auto min-w-[210px] max-w-full
+bg-white text-black rounded-xl font-semibold 
+transition-all duration-300 
+hover:scale-[1.02] sm:hover:scale-105 
+hover:shadow-xl hover:shadow-white/20"
             >
               <FaApple className="text-2xl sm:text-3xl" />
               <div className="text-left flex-1 sm:flex-none">
@@ -98,7 +104,12 @@ export default function HeroSection() {
               href="https://play.google.com/store/apps/details?id=com.codexahmar.locafii"
               target="_blank"
               rel="noopener noreferrer"
-              className="group w-full sm:w-auto relative inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-8 py-3 bg-black text-white border border-neutral-800 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 hover:bg-neutral-900"
+              className="group relative inline-flex items-center justify-center gap-2.5 sm:gap-3 
+px-5 sm:px-8 py-3 
+w-auto min-w-[210px] max-w-full
+bg-black text-white border border-neutral-800 rounded-xl font-semibold 
+transition-all duration-300 
+hover:scale-[1.02] sm:hover:scale-105 hover:bg-neutral-900"
             >
               <FaGooglePlay className="text-xl sm:text-2xl text-[#00E676]" />
               <div className="text-left flex-1 sm:flex-none">

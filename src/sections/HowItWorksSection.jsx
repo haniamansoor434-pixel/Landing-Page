@@ -95,23 +95,7 @@ export default function HowItWorksSection() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6 }}
-          className="text-center mt-12 sm:mt-16 w-full"
-        >
-          <div className="glass-card rounded-3xl p-6 sm:p-8 inline-block w-full sm:w-auto">
-            <p className="text-gray-400 text-sm sm:text-base mb-4 text-left sm:text-center">
-              Ready to get started?
-            </p>
-            <button className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base bg-[#56FBAC] text-[#0C0E1D] rounded-2xl font-semibold hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:shadow-[#56FBAC]/40">
-              Download Locafii Now
-            </button>
-          </div>
-        </motion.div>
+    
       </div>
     </section>
   );

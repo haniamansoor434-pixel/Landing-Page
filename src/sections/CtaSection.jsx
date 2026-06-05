@@ -79,19 +79,8 @@ export default function CtaSection() {
 
             {/* Content */}
             <div className="relative z-10">
-              {/* Badge */}
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-5 sm:mb-6 border border-[#56FBAC]/20"
-              >
-                <HiSparkles className="text-[#56FBAC]" />
-                <span className="text-xs sm:text-sm font-medium text-[#56FBAC]">
-                  Start Protecting Your Family Today
-                </span>
-              </motion.div>
+
+
 
               {/* Headline */}
               <motion.h2
@@ -125,12 +114,18 @@ export default function CtaSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5 }}
-                className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center w-full mb-7 sm:mb-8"
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-start sm:justify-center items-start sm:items-center w-full mb-7 sm:mb-8"
               >
                 {/* App Store Button */}
                 <button
                   onClick={triggerToast}
-                  className="group w-full sm:w-auto relative inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-8 py-4 sm:py-5 bg-white text-black rounded-2xl font-semibold transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 hover:shadow-2xl hover:shadow-white/30"
+                  className="group relative inline-flex items-center justify-center gap-2.5 sm:gap-3 
+px-5 sm:px-8 py-4 sm:py-5 
+w-auto min-w-[210px] max-w-full
+bg-white text-black rounded-2xl font-semibold 
+transition-all duration-300 
+hover:scale-[1.02] sm:hover:scale-105 
+hover:shadow-2xl hover:shadow-white/30"
                 >
                   <FaApple className="text-2xl sm:text-3xl shrink-0" />
                   <div className="text-left flex-1 sm:flex-none">
@@ -148,7 +143,13 @@ export default function CtaSection() {
                   href="https://play.google.com/store/apps/details?id=com.codexahmar.locafii"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group w-full sm:w-auto relative inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-8 py-4 sm:py-5 glass rounded-2xl font-semibold transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 hover:bg-white/10 hover:shadow-2xl"
+                  className="group relative inline-flex items-center justify-center gap-2.5 sm:gap-3 
+px-5 sm:px-8 py-4 sm:py-5 
+w-auto min-w-[210px] max-w-full
+glass rounded-2xl font-semibold 
+transition-all duration-300 
+hover:scale-[1.02] sm:hover:scale-105 
+hover:bg-white/10 hover:shadow-2xl"
                 >
                   <FaGooglePlay className="text-2xl sm:text-3xl text-[#56FBAC] shrink-0" />
                   <div className="text-left flex-1 sm:flex-none">
@@ -228,7 +229,7 @@ export default function CtaSection() {
             </div>
           </div>
         </motion.div>
-      </div>
-    </section>
+      </div >
+    </section >
   );
 }
