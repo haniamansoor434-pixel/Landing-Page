@@ -1,12 +1,47 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
-import { FiLock, FiDatabase, FiCheckCircle, FiMapPin } from "react-icons/fi";
-// import trackScreenSrc from "../assets/screenshots/trackScreen.png";
+import { FiLock, FiDatabase, FiCheckCircle, FiMapPin, FiX } from "react-icons/fi";
 import trackScreenSrc from "../assets/screenshots/track_screen.png";
 
 export default function HeroSection() {
+  const [showToast, setShowToast] = useState(false);
+
+  const triggerToast = () => {
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 4000);
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 py-16 sm:py-20 overflow-hidden">
+      {/* Toast Notification Container */}
+      <div className="fixed top-5 left-1/2 -translate-x-1/2 z-50 pointer-events-none w-[calc(100%-2rem)] sm:w-auto flex justify-center">
+        <AnimatePresence>
+          {showToast && (
+            <motion.div
+              initial={{ opacity: 0, y: -20, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -20, scale: 0.9 }}
+              className="pointer-events-auto flex items-center gap-3 bg-neutral-900/90 border border-white/10 text-white px-5 py-4 rounded-2xl shadow-2xl backdrop-blur-md max-w-sm"
+            >
+              <div className="p-2 bg-white/10 rounded-xl text-xl text-[#56FBAC]">
+                <FaApple />
+              </div>
+              <div className="flex-1 text-left">
+                <h4 className="font-semibold text-sm">Coming Soon!</h4>
+                <p className="text-xs text-gray-400 mt-0.5">Locafii is currently in review for iOS. Stay tuned!</p>
+              </div>
+              <button
+                onClick={() => setShowToast(false)}
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <FiX size={16} />
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+
       {/* Content Container */}
       <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-10 lg:gap-12 items-center relative z-10">
 
@@ -17,8 +52,6 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
           className="text-left"
         >
-
-
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -30,7 +63,6 @@ export default function HeroSection() {
             <br />
             <span className="text-gradient">Stay Safe.</span>
           </motion.h1>
-
 
           {/* Description */}
           <motion.p
@@ -49,21 +81,31 @@ export default function HeroSection() {
             transition={{ delay: 0.5 }}
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-10 w-full sm:w-auto items-stretch sm:items-center justify-start"
           >
-            <button className="group w-full sm:w-auto relative inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-8 py-3.5 sm:py-4 bg-white text-black rounded-2xl font-semibold transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 hover:shadow-xl hover:shadow-white/20">
-              <FaApple className="text-xl sm:text-2xl" />
+            {/* App Store Button (Triggers Snackbar) */}
+            <button
+              onClick={triggerToast}
+              className="group w-full sm:w-auto relative inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-8 py-3 bg-white text-black rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 hover:shadow-xl hover:shadow-white/20"
+            >
+              <FaApple className="text-2xl sm:text-3xl" />
               <div className="text-left flex-1 sm:flex-none">
-                <div className="text-xs opacity-70 leading-tight">Download on the</div>
-                <div className="text-sm sm:text-base font-bold leading-tight">App Store</div>
+                <div className="text-[10px] uppercase tracking-wider opacity-70 font-bold leading-none mb-0.5">Download on the</div>
+                <div className="text-base sm:text-lg font-bold leading-none font-sans">App Store</div>
               </div>
             </button>
 
-            <button className="group w-full sm:w-auto relative inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-8 py-3.5 sm:py-4 glass rounded-2xl font-semibold transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 hover:bg-white/10">
-              <FaGooglePlay className="text-xl sm:text-2xl text-[#56FBAC]" />
+            {/* Google Play Button (Official Style & Real Link) */}
+            <a
+              href="https://play.google.com/store/apps/details?id=com.codexahmar.locafii"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group w-full sm:w-auto relative inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-8 py-3 bg-black text-white border border-neutral-800 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 hover:bg-neutral-900"
+            >
+              <FaGooglePlay className="text-xl sm:text-2xl text-[#00E676]" />
               <div className="text-left flex-1 sm:flex-none">
-                <div className="text-xs opacity-70 leading-tight">Get it on</div>
-                <div className="text-sm sm:text-base font-bold leading-tight">Google Play</div>
+                <div className="text-[10px] uppercase tracking-wider text-gray-400 font-bold leading-none mb-0.5">GET IT ON</div>
+                <div className="text-base sm:text-lg font-bold leading-none font-sans tracking-tight">Google Play</div>
               </div>
-            </button>
+            </a>
           </motion.div>
 
           {/* Trust Indicators */}
@@ -90,44 +132,34 @@ export default function HeroSection() {
           </motion.div>
         </motion.div>
 
+        {/* RIGHT: Visuals Container */}
         <motion.div
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="relative flex justify-center lg:justify-end"
         >
-          {/* Floating Phone Container */}
           <motion.div
             animate={{ y: [0, -15, 0], rotate: [0, 1, -1, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             className="relative"
           >
-            {/* Soft Glow Behind Phone */}
             <div className="absolute inset-0 bg-gradient-to-tr from-[#56FBAC]/10 to-[#1A1C30]/40 rounded-[3rem] blur-3xl"></div>
 
-            {/* Phone Frame */}
             <div className="relative glass-card rounded-[2.5rem] sm:rounded-[3rem] p-2 sm:p-3 
                 w-full max-w-[260px] sm:max-w-[280px] md:max-w-[320px] 
                 aspect-[9/19] mx-auto
                 overflow-hidden border border-white/10 shadow-xl">
 
-              {/* Screen Content Container */}
               <div className="w-full h-full bg-[#1A1C30] rounded-[2rem] overflow-hidden relative border border-black/50">
-
                 <img
                   src={trackScreenSrc}
                   alt="Locafii Live Location Screen"
-                  /* Removed scale-100 to use object-cover effectively */
                   className="w-full h-full object-cover object-top"
                 />
-
-
-
               </div>
             </div>
 
-
-            {/* Floating Badge 1 */}
             <motion.div
               animate={{ y: [0, -10, 0], rotate: [0, 5, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -138,8 +170,6 @@ export default function HeroSection() {
               </div>
               <div className="font-bold text-green-400 flex items-center gap-1">● Active</div>
             </motion.div>
-
-
           </motion.div>
         </motion.div>
       </div>
